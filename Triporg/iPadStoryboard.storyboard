@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="ZKX-ge-QLX">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="4368" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Zi Pad List View Controller-->
+        <scene sceneID="A9y-RF-Wfc">
+            <objects>
+                <viewController storyboardIdentifier="iPadBegins" id="ZKX-ge-QLX" customClass="TZiPadListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uHh-a8-qmz"/>
+                        <viewControllerLayoutGuide type="bottom" id="dGe-W0-30A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dwg-9d-qin">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="W7W-1B-9Go">
+                                <rect key="frame" x="320" y="0.0" width="448" height="1024"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ZKX-ge-QLX" id="QUi-sG-ldQ"/>
+                                </connections>
+                            </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fWt-k3-Ga1">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1024"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="EmC-Rc-jjV"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZKX-ge-QLX" id="i2h-VP-8s8"/>
+                                    <outlet property="delegate" destination="ZKX-ge-QLX" id="6K7-Te-G23"/>
+                                </connections>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OGr-bO-kiE">
+                                <rect key="frame" x="625" y="988" width="123" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="nvI-Ut-L9h"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="St"/>
+                                    <segment title="H"/>
+                                    <segment title="S"/>
+                                </segments>
+                                <connections>
+                                    <action selector="MapTypeChange:" destination="ZKX-ge-QLX" eventType="valueChanged" id="cGI-Cf-Tdy"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wCo-E6-CKe">
+                                <rect key="frame" x="320" y="0.0" width="448" height="1024"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dGe-W0-30A" firstAttribute="top" secondItem="OGr-bO-kiE" secondAttribute="bottom" constant="8" id="5Ve-Tf-uVX"/>
+                            <constraint firstItem="fWt-k3-Ga1" firstAttribute="leading" secondItem="dwg-9d-qin" secondAttribute="leading" id="Coe-Nr-Pja"/>
+                            <constraint firstItem="fWt-k3-Ga1" firstAttribute="height" secondItem="dwg-9d-qin" secondAttribute="height" id="KS7-2c-Yho"/>
+                            <constraint firstAttribute="trailing" secondItem="OGr-bO-kiE" secondAttribute="trailing" constant="20" symbolic="YES" id="S3f-Zr-2CT"/>
+                            <constraint firstItem="W7W-1B-9Go" firstAttribute="height" secondItem="wCo-E6-CKe" secondAttribute="height" id="a4K-Ir-kX9"/>
+                            <constraint firstItem="W7W-1B-9Go" firstAttribute="trailing" secondItem="wCo-E6-CKe" secondAttribute="trailing" id="aE4-IG-HEA"/>
+                            <constraint firstItem="W7W-1B-9Go" firstAttribute="leading" secondItem="wCo-E6-CKe" secondAttribute="leading" id="aYU-69-3fW"/>
+                            <constraint firstItem="W7W-1B-9Go" firstAttribute="bottom" secondItem="wCo-E6-CKe" secondAttribute="bottom" id="czg-AR-O1h"/>
+                            <constraint firstItem="wCo-E6-CKe" firstAttribute="bottom" secondItem="fWt-k3-Ga1" secondAttribute="bottom" id="fLe-4C-SFf"/>
+                            <constraint firstItem="fWt-k3-Ga1" firstAttribute="top" secondItem="dwg-9d-qin" secondAttribute="top" id="hO6-6z-HYE"/>
+                            <constraint firstItem="fWt-k3-Ga1" firstAttribute="top" secondItem="wCo-E6-CKe" secondAttribute="top" id="jEn-KV-2u6"/>
+                            <constraint firstItem="fWt-k3-Ga1" firstAttribute="bottom" secondItem="dGe-W0-30A" secondAttribute="top" id="kEw-XE-bXE"/>
+                            <constraint firstAttribute="trailing" secondItem="W7W-1B-9Go" secondAttribute="trailing" id="nEK-Ys-aTV"/>
+                            <constraint firstItem="wCo-E6-CKe" firstAttribute="top" secondItem="W7W-1B-9Go" secondAttribute="top" id="neY-R9-wSq"/>
+                            <constraint firstItem="wCo-E6-CKe" firstAttribute="leading" secondItem="fWt-k3-Ga1" secondAttribute="trailing" id="ujn-kc-1EJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="wCo-E6-CKe" id="A2Y-YB-tGO"/>
+                        <outlet property="mapControl" destination="OGr-bO-kiE" id="eXY-Qy-sO6"/>
+                        <outlet property="mapView" destination="W7W-1B-9Go" id="qUV-KD-Vy7"/>
+                        <outlet property="tableView" destination="fWt-k3-Ga1" id="48T-oy-ZlT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uPE-BQ-CTI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-697" y="-296"/>
+        </scene>
+        <!--Zi Pad Detail View Controller-->
+        <scene sceneID="VxG-1G-Lo9">
+            <objects>
+                <viewController storyboardIdentifier="TableiPad" id="gyP-WN-D8u" customClass="TZiPadDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SGb-jb-Cgl"/>
+                        <viewControllerLayoutGuide type="bottom" id="JsT-fZ-yb6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4kA-H6-TDN">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="OAX-26-mGt">
+                                <rect key="frame" x="0.0" y="0.0" width="448" height="958"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="gyP-WN-D8u" id="Kyw-ID-JY2"/>
+                                    <outlet property="delegate" destination="gyP-WN-D8u" id="JZm-Qx-hS7"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="OAX-26-mGt" id="x0t-51-ygv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l26-OM-rcb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-697" y="652"/>
+        </scene>
+        <!--Cityi Pad View Controller-->
+        <scene sceneID="0ER-fn-rxC">
+            <objects>
+                <viewController storyboardIdentifier="iPadCity" id="cgH-WF-rtu" customClass="TZCityiPadViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1LJ-z7-s1N"/>
+                        <viewControllerLayoutGuide type="bottom" id="HuC-5g-BVd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IFW-mt-vOh">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Nn3-sx-K48">
+                                <rect key="frame" x="0.0" y="0.0" width="448" height="958"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="cgH-WF-rtu" id="O20-1L-utc"/>
+                                    <outlet property="delegate" destination="cgH-WF-rtu" id="Nvc-qZ-XFa"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Nn3-sx-K48" id="p55-4G-C4A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YTI-mw-BMJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="449" y="652"/>
+        </scene>
+        <!--Zi Pad Map View Controller-->
+        <scene sceneID="QD2-Ug-iKt">
+            <objects>
+                <viewController storyboardIdentifier="iPadMap" id="19v-dU-xnS" customClass="TZiPadMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kBq-sz-afd"/>
+                        <viewControllerLayoutGuide type="bottom" id="SGm-Gv-Y1e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pkd-Fq-gl8">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Rkd-hx-dFK">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <connections>
+                                    <outlet property="delegate" destination="19v-dU-xnS" id="rCV-Wz-nDE"/>
+                                </connections>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OAG-9h-xYk">
+                                <rect key="frame" x="625" y="988" width="123" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="GhW-gF-g6P"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="St"/>
+                                    <segment title="H"/>
+                                    <segment title="S"/>
+                                </segments>
+                                <connections>
+                                    <action selector="MapTypeChange:" destination="19v-dU-xnS" eventType="valueChanged" id="h5P-Pk-l0j"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="OAG-9h-xYk" secondAttribute="trailing" constant="20" symbolic="YES" id="6Uw-fN-kpL"/>
+                            <constraint firstAttribute="trailing" secondItem="Rkd-hx-dFK" secondAttribute="trailing" id="YIG-GG-Zfu"/>
+                            <constraint firstItem="SGm-Gv-Y1e" firstAttribute="top" secondItem="OAG-9h-xYk" secondAttribute="bottom" constant="8" id="c9G-9o-tzC"/>
+                            <constraint firstItem="Rkd-hx-dFK" firstAttribute="top" secondItem="Pkd-Fq-gl8" secondAttribute="top" id="gRb-ij-Osr"/>
+                            <constraint firstAttribute="bottom" secondItem="Rkd-hx-dFK" secondAttribute="bottom" id="nBL-V8-s1v"/>
+                            <constraint firstItem="Rkd-hx-dFK" firstAttribute="leading" secondItem="Pkd-Fq-gl8" secondAttribute="leading" id="vmp-C2-rkx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapControl" destination="OAG-9h-xYk" id="l3z-Rp-uaz"/>
+                        <outlet property="mapView" destination="Rkd-hx-dFK" id="YQs-Ks-W8e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bra-ND-uXT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="449" y="-296"/>
+        </scene>
+    </scenes>
+</document>

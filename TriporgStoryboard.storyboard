@@ -1,0 +1,1698 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="r5h-jk-Izf">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="4368" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Trips Table Controller-->
+        <scene sceneID="dkJ-MX-Bgp">
+            <objects>
+                <viewController id="CrW-hC-4oX" customClass="TZTripsTableController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UIs-Si-rKF"/>
+                        <viewControllerLayoutGuide type="bottom" id="hUi-78-QR2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="M1b-O6-N73">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="vYO-BE-cUR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="CrW-hC-4oX" id="uFX-FN-3SN"/>
+                                    <outlet property="delegate" destination="CrW-hC-4oX" id="vi8-9f-mxa"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vYO-BE-cUR" secondAttribute="trailing" id="MOy-jC-MMT"/>
+                            <constraint firstAttribute="bottom" secondItem="vYO-BE-cUR" secondAttribute="bottom" id="bJx-RE-3zR"/>
+                            <constraint firstItem="vYO-BE-cUR" firstAttribute="top" secondItem="M1b-O6-N73" secondAttribute="top" id="dcR-1G-gXo"/>
+                            <constraint firstItem="vYO-BE-cUR" firstAttribute="leading" secondItem="M1b-O6-N73" secondAttribute="leading" id="mup-KI-X0M"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="SZt-bd-6F9"/>
+                    <connections>
+                        <outlet property="tableView" destination="vYO-BE-cUR" id="EtX-CG-xWm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UcS-LJ-Gnt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-722" y="237"/>
+        </scene>
+        <!--User Profile Controller-->
+        <scene sceneID="YX4-IQ-gus">
+            <objects>
+                <viewController storyboardIdentifier="userPanel" id="Zde-dA-I7i" customClass="TZUserProfileController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nWf-nj-aCC"/>
+                        <viewControllerLayoutGuide type="bottom" id="uYn-ls-CcQ"/>
+                    </layoutGuides>
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="2eh-mE-8As">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xce-TP-DPJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14l-Mp-5fM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-304" y="-409"/>
+        </scene>
+        <!--Create Trip Controller-->
+        <scene sceneID="cCX-I4-juS">
+            <objects>
+                <viewController storyboardIdentifier="CreateTrip" id="gek-Hc-Mxh" customClass="TZCreateTripController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eXZ-q5-ZZH"/>
+                        <viewControllerLayoutGuide type="bottom" id="V0G-Vd-BHq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OjF-NA-u32">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ich-6X-GW4">
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="cancel" id="zdQ-ts-vJN"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YUg-HG-N0w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-722" y="885"/>
+        </scene>
+        <!--Help View Controller-->
+        <scene sceneID="1xD-EZ-sIz">
+            <objects>
+                <viewController storyboardIdentifier="Helping" id="bp7-gE-wHP" customClass="TZHelpViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SBp-cE-CsN"/>
+                        <viewControllerLayoutGuide type="bottom" id="emh-Of-EJL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5h2-gO-3Gl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" translatesAutoresizingMaskIntoConstraints="NO" id="0FG-Re-hl4">
+                                <rect key="frame" x="20" y="630" width="335" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.49019607840000001" green="0.72941176470000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cak-cF-mLf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organiza tu tiempo de viaje" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="5IZ-DZ-DXQ">
+                                        <rect key="frame" x="20" y="73" width="335" height="51"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="51" id="hsm-Je-fTx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="4QW-DW-Hih">
+                                        <rect key="frame" x="20" y="132" width="335" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="HfB-dy-6iP"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="triporg es tu organizador de viajes online">
+                                                <attributes>
+                                                    <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3sC-ft-Hqw">
+                                        <rect key="frame" x="20" y="220" width="335" height="417"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="4QW-DW-Hih" firstAttribute="leading" secondItem="3sC-ft-Hqw" secondAttribute="leading" id="0se-of-9S8"/>
+                                    <constraint firstAttribute="bottom" secondItem="3sC-ft-Hqw" secondAttribute="bottom" constant="30" id="9sx-bo-o1L"/>
+                                    <constraint firstItem="5IZ-DZ-DXQ" firstAttribute="top" secondItem="Cak-cF-mLf" secondAttribute="top" constant="73" id="BsE-Qx-FAu"/>
+                                    <constraint firstAttribute="trailing" secondItem="5IZ-DZ-DXQ" secondAttribute="trailing" constant="20" symbolic="YES" id="DMX-mv-SMa"/>
+                                    <constraint firstItem="5IZ-DZ-DXQ" firstAttribute="leading" secondItem="Cak-cF-mLf" secondAttribute="leading" constant="20" symbolic="YES" id="NrR-QJ-YId"/>
+                                    <constraint firstItem="4QW-DW-Hih" firstAttribute="top" secondItem="5IZ-DZ-DXQ" secondAttribute="bottom" constant="8" symbolic="YES" id="W3p-2v-8FV"/>
+                                    <constraint firstItem="3sC-ft-Hqw" firstAttribute="top" secondItem="4QW-DW-Hih" secondAttribute="bottom" constant="8" symbolic="YES" id="aJi-Wp-ohM"/>
+                                    <constraint firstItem="5IZ-DZ-DXQ" firstAttribute="leading" secondItem="4QW-DW-Hih" secondAttribute="leading" id="rdE-bC-llk"/>
+                                    <constraint firstItem="4QW-DW-Hih" firstAttribute="trailing" secondItem="5IZ-DZ-DXQ" secondAttribute="trailing" id="vXe-C0-MdG"/>
+                                    <constraint firstItem="3sC-ft-Hqw" firstAttribute="trailing" secondItem="4QW-DW-Hih" secondAttribute="trailing" id="z3f-Y5-NyI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Cak-cF-mLf" firstAttribute="leading" secondItem="5h2-gO-3Gl" secondAttribute="leading" id="5JY-t5-12k"/>
+                            <constraint firstItem="Cak-cF-mLf" firstAttribute="top" secondItem="5h2-gO-3Gl" secondAttribute="top" id="5gg-4g-gKo"/>
+                            <constraint firstAttribute="bottom" secondItem="0FG-Re-hl4" secondAttribute="bottom" id="CQr-Ak-k0k"/>
+                            <constraint firstItem="0FG-Re-hl4" firstAttribute="leading" secondItem="5h2-gO-3Gl" secondAttribute="leading" constant="20" symbolic="YES" id="VJh-Ot-iq1"/>
+                            <constraint firstItem="0FG-Re-hl4" firstAttribute="centerX" secondItem="Cak-cF-mLf" secondAttribute="centerX" id="ZPP-Hh-4bu"/>
+                            <constraint firstItem="0FG-Re-hl4" firstAttribute="bottom" secondItem="Cak-cF-mLf" secondAttribute="bottom" id="kO8-7T-B1y"/>
+                            <constraint firstAttribute="trailing" secondItem="0FG-Re-hl4" secondAttribute="trailing" constant="20" symbolic="YES" id="sxL-7h-yFj"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="imagenAyuda" destination="3sC-ft-Hqw" id="jgT-vs-eMO"/>
+                        <outlet property="indicePaginas" destination="0FG-Re-hl4" id="O5l-0F-NgW"/>
+                        <outlet property="textoAyuda" destination="4QW-DW-Hih" id="6qz-Sh-zSM"/>
+                        <outlet property="tituloAyuda" destination="5IZ-DZ-DXQ" id="ecj-pS-KY2"/>
+                        <outlet property="viewAyuda" destination="Cak-cF-mLf" id="Mky-9S-DMp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6fN-uL-QX2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1151" y="-409"/>
+        </scene>
+        <!--Restriction Add Controller-->
+        <scene sceneID="8cJ-XH-ThC">
+            <objects>
+                <viewController storyboardIdentifier="Citas" id="edV-bC-mjF" customClass="TZRestrictionAddController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mtn-jz-d5R"/>
+                        <viewControllerLayoutGuide type="bottom" id="Oua-Vp-WAl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W9x-og-5Gh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g8Z-HD-EMG">
+                                <rect key="frame" x="0.0" y="192" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="edV-bC-mjF" id="RG1-Bh-HfK"/>
+                                </connections>
+                            </searchBar>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NDR-Gn-lq0">
+                                <rect key="frame" x="0.0" y="65" width="320" height="127"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gYc-1t-Vlh">
+                                        <rect key="frame" x="175" y="10" width="125" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vwe-OK-hJv">
+                                        <rect key="frame" x="175" y="50" width="125" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9eP-He-75c">
+                                        <rect key="frame" x="175" y="90" width="125" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Empieza" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMt-5E-2V0">
+                                        <rect key="frame" x="20" y="50" width="75" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Termina" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrG-Ih-C6t">
+                                        <rect key="frame" x="20" y="90" width="75" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXp-dh-6mO">
+                                        <rect key="frame" x="20" y="10" width="69" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="editEndDate" destination="9eP-He-75c" id="dgV-VW-6wM"/>
+                        <outlet property="editStartDate" destination="vwe-OK-hJv" id="qGn-AC-IM2"/>
+                        <outlet property="labelEnd" destination="zrG-Ih-C6t" id="EXf-kz-hVh"/>
+                        <outlet property="labelName" destination="gXp-dh-6mO" id="TqF-sR-BZj"/>
+                        <outlet property="labelStart" destination="qMt-5E-2V0" id="dXT-ZN-Oe8"/>
+                        <outlet property="nombreCita" destination="gYc-1t-Vlh" id="pW2-ON-45Z"/>
+                        <outlet property="searchDisplayController" destination="AcT-XG-jqz" id="WBw-0U-eHx"/>
+                        <outlet property="searcher" destination="g8Z-HD-EMG" id="c3a-Rf-W0w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FgH-y4-tqw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="AcT-XG-jqz"/>
+            </objects>
+            <point key="canvasLocation" x="-722" y="1537"/>
+        </scene>
+        <!--Trip Map Controller-->
+        <scene sceneID="bJI-kc-0pX">
+            <objects>
+                <viewController storyboardIdentifier="Map" id="R2G-P8-BxX" customClass="TZTripMapController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ERM-9c-3fA"/>
+                        <viewControllerLayoutGuide type="bottom" id="mIk-56-Eyz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o7K-sN-AGu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9f0-DZ-fNv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <outlet property="delegate" destination="R2G-P8-BxX" id="VXp-cU-d4q"/>
+                                </connections>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="V2k-t1-KWa">
+                                <rect key="frame" x="285" y="632" width="80" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="RsF-ZD-h8W"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="St"/>
+                                    <segment title="H"/>
+                                    <segment title="S"/>
+                                </segments>
+                                <connections>
+                                    <action selector="MapTypeChange:" destination="R2G-P8-BxX" eventType="valueChanged" id="jVu-bj-K6q"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9f0-DZ-fNv" firstAttribute="leading" secondItem="o7K-sN-AGu" secondAttribute="leading" id="Bqs-Ea-S76"/>
+                            <constraint firstAttribute="bottom" secondItem="9f0-DZ-fNv" secondAttribute="bottom" id="KdC-VX-CEM"/>
+                            <constraint firstItem="9f0-DZ-fNv" firstAttribute="top" secondItem="o7K-sN-AGu" secondAttribute="top" id="YaG-8C-9UL"/>
+                            <constraint firstAttribute="trailing" secondItem="9f0-DZ-fNv" secondAttribute="trailing" id="fim-Lu-wUR"/>
+                            <constraint firstItem="mIk-56-Eyz" firstAttribute="top" secondItem="V2k-t1-KWa" secondAttribute="bottom" constant="7" id="gae-W7-Wpt"/>
+                            <constraint firstAttribute="trailing" secondItem="V2k-t1-KWa" secondAttribute="trailing" constant="10" id="w8T-VF-iSL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapControl" destination="V2k-t1-KWa" id="b8a-Qc-YEh"/>
+                        <outlet property="mapView" destination="9f0-DZ-fNv" id="YLd-La-CPl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SAM-aw-I3f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-304" y="885"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="13g-Gf-84f">
+            <objects>
+                <viewController storyboardIdentifier="TriporgImageShow" id="8cD-VU-MMV" customClass="TZPhotoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kUg-3K-W1l"/>
+                        <viewControllerLayoutGuide type="bottom" id="GB4-fk-Ndp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="13Y-Bs-9sE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EcU-qf-cmh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="119" y="1537"/>
+        </scene>
+        <!--Booking View Controller-->
+        <scene sceneID="1NO-Gn-oz7">
+            <objects>
+                <viewController storyboardIdentifier="reservasGo" id="oaC-Xi-uTF" customClass="TZBookingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UOQ-tg-7Ac"/>
+                        <viewControllerLayoutGuide type="bottom" id="zIA-8t-Me7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ilX-Bh-rdK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHY-9p-Mza">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="oaC-Xi-uTF" id="Efi-nK-hLL"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IHY-9p-Mza" firstAttribute="top" secondItem="ilX-Bh-rdK" secondAttribute="top" id="5wf-sF-FjR"/>
+                            <constraint firstAttribute="trailing" secondItem="IHY-9p-Mza" secondAttribute="trailing" id="6aM-qz-YYh"/>
+                            <constraint firstItem="IHY-9p-Mza" firstAttribute="leading" secondItem="ilX-Bh-rdK" secondAttribute="leading" id="jNo-6y-zVJ"/>
+                            <constraint firstAttribute="bottom" secondItem="IHY-9p-Mza" secondAttribute="bottom" id="v49-RA-8b1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="IHY-9p-Mza" id="bHV-dl-wyo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9sn-V7-vaB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="523" y="1537"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Hj1-pr-JVv">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="r5h-jk-Izf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="eUO-tu-jeI">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.57647058819999997" green="0.82745098039999998" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="CrW-hC-4oX" kind="relationship" relationship="rootViewController" id="KWx-zZ-KLe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wnv-6m-nAz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1151" y="237"/>
+        </scene>
+        <!--Legal View Controller-->
+        <scene sceneID="NLU-3S-OAW">
+            <objects>
+                <viewController storyboardIdentifier="LegalShow" id="k6m-j1-PVh" customClass="TZLegalViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OjW-t3-JPu"/>
+                        <viewControllerLayoutGuide type="bottom" id="poR-tA-ZEi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T7m-rI-KfF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xh5-bR-ICb">
+                                <rect key="frame" x="32.5" y="0.0" width="310" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="310" id="OGx-e2-eoZ"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+CgoKA
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Términos y Condiciones">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+
+El autor de los contenidos y propietario del website es TRIPORG, S.L. (en lo sucesivo el “propietario”) o las personas por él invitadas. Este Sitio Web (en adelante, el "Sitio Web") esta administrado y es titularidad de TRIPORG, S.L. con domicilio en Calle Colón de Larreategui, 18 – 2º Izq-Dch. 48.001 Bilbao – Bizkaia (España) (en adelante, "TRIPORG"). 
+
+POR FAVOR, LEE DETENIDAMENTE ESTOS TÉRMINOS Y CONDICIONES DE USO ANTES DE UTILIZAR ESTE SITIO WEB. 
+
+Por la utilización del Sitio Web aceptas expresamente y sin reservas cumplir con y quedar sujeto a los presentes Términos y Condiciones, los cuales podrán ser modificados por TRIPORG en cualquier momento como se indica en estos mismos Términos y Condiciones. Por favor, revisa periódicamente estos Términos y Condiciones por si hubiese cualquier cambio. Si no aceptas estos Términos y Condiciones no estás autorizado para, y no deberás, acceder ni utilizar este Sitio Web. El acceso y utilización de los servicios que facilita este sitio web supone la aceptación de estas condiciones generales, que serán de aplicación sin perjuicio de las condiciones particulares o especiales que, en su caso, se establezcan. Le rogamos, por tanto, lea detenidamente este documento. 
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Política de Protección de Datos de Carácter Personal">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+
+Se garantiza mediante el presente AVISO LEGAL la privacidad en la prestación de los servicios electrónicos de acuerdo con las exigencias legales y se informa acerca de la Política de Protección de Datos de Carácter Personal, para que los usuarios determinen de forma libre y voluntaria si desean facilitar sus datos personales a través de los medios puestos a su disposición en el website. 
+
+Los usuarios consienten el tratamiento automatizado de sus datos personales por parte del propietario del website en los términos que se detallan a continuación: 
+
+* Confidencialidad en el tratamiento automatizado de los datos de carácter personal de los Usuarios 
+
+El propietario garantiza la confidencialidad de los datos de carácter personal facilitados por los usuarios y su tratamiento automatizado de acuerdo con la legislación vigente sobre protección de datos de carácter personal (Ley Orgánica 15/1999 de 13 de Diciembre de Protección de Datos de Carácter Personal y su reglamento de desarrollo, así como toda la normativa aplicable a esta materia). 
+
+El propietario ha adoptado los niveles de seguridad de protección de los datos personales establecidos en la normativa vigente, y ha instalado todos los medios y medidas técnicas a su alcance para evitar la pérdida, mal uso, alteración, acceso no autorizado y robo de los datos personales facilitados. 
+
+Los datos personales recogidos serán objeto de tratamiento automatizado e incorporados a los correspondientes ficheros automatizados por el propietario del website. 
+
+El propietario del website facilitará a los usuarios de forma permanente acceso al presente documento para que, con carácter previo a la entrega de los datos personales, éstos puedan prestar su consentimiento a fin de que el propietario del website proceda al tratamiento automatizado de sus datos personales. 
+
+El propietario del website se reserva el derecho a modificar la presente Política de Protección de Datos con el fin de adaptarla a las novedades y/o exigencias legislativas y jurisprudenciales así como a prácticas de la industria, tomando en consideración en todo momento los legítimos intereses de los titulares de los datos. 
+
+Ciertos servicios prestados a través del website pueden contener condiciones particulares con previsiones específicas en materia de protección de datos personales. Se hace indispensable su lectura y aceptación con carácter previo a la presentación del servicio de que se trate. 
+
+* Datos de carácter personal recabados 
+
+El mero acceso del usuario a este blog dará lugar al recabo de su IP con fines estadísticos, tal y como se indica en el apartado denominado “Uso de Cookies y del fichero de actividad. 
+
+Monitorización del website” del presente texto. Asimismo, el usuario puede decidir enviar por email o vía formulario otros datos de carácter personal como la dirección de correo electrónico, el nombre y apellidos o el número de teléfono. 
+
+* Finalidad de la recogida y tratamiento automatizado de los datos de carácter personal 
+
+La recogida y tratamiento automatizado de los datos personales, como consecuencia de la navegación por las páginas del website, de la consulta, solicitud o suscripción de cualquier servicio/s de los ofrecidos por el propietario del website tiene como finalidades las detalladas a continuación: (i) la gestión, administración y prestación de los servicios en los que el usuario decida darse de alta o utilizar; (ii) el estudio cuantitativo y cualitativo de las visitas y de la utilización de los servicios por parte de los usuarios; (iii) informar, permitir opinar públicamente al lector, contestar a las consultas y obtener datos estadísticos de las mismas; y (iiii) el envío por medios tradicionales y/o electrónicos de información acerca de los productos y servicios ofrecidos por el propietario del website. 
+
+* Derechos de los Usuarios en relación a sus datos personales 
+
+En cumplimiento de lo dispuesto en la normativa aplicable se informa al usuario de la existencia de un fichero automatizado de datos personales debidamente inscrito en el Registro General de la Agencia Española de Protección de Datos. Los datos y tratamientos a los que se sometan serán únicamente los referidos en el presente aviso legal. Los Usuarios tienen reconocidos y podrán ejercitar los derechos de acceso, rectificación, cancelación y oposición mediante comunicación dirigida al propietario del website a la dirección de correo electrónico info@triporg.org o por escrito a: 
+
+  Departamento de Atención al Cliente 
+  Calle Colón de Larreategui, 18 – 2º Izq-Dch. 
+  48.001 Bilbao – Bizkaia (España) 
+
+* Uso de Cookies y del fichero de actividad. Monitorización del website 
+
+El website utiliza cookies cuando un usuario navega por sus sitios y páginas. Las cookies utilizadas por el website son ficheros enviados a un navegador por medio de un servidor web para registrar las actividades del usuario en la website y permitirle una navegación más fluida y personalizada. El usuario tiene la posibilidad de configurar su navegador para impedir la entrada de éstas, bloquearlas o, en su caso, eliminarlas. Para utilizar el website, no resulta necesario que el usuario permita la instalación de las cookies enviadas por el website. 
+
+De igual forma, los servidores web del website detectan de manera automática la dirección IP y el nombre de la red utilizados por el usuario. Toda esta información es registrada en un fichero de actividad del servidor que permite el posterior procesamiento de los datos con el fin de obtener mediciones estadísticas que permitan conocer el número de impresiones de páginas, el número de visitas realizadas a los servicios web, etc. 
+
+Además de sistemas propios de monitorización del website, este website utiliza herramientas estadísticas externas de WordPress.com alojadas en los servidores del propietario así como Google Analytics, un servicio analítico de web prestado por Google, Inc., una compañía de Delaware cuya oficina principal está en 1600 Amphitheatre Parkway, Mountain View (California), CA 94043, Estados Unidos (“Google”). Google Analytics utiliza “cookies”, que son archivos de texto ubicados en su ordenador, para ayudar al website a analizar el uso que hacen los usuarios del sitio web. La información que genera la cookie acerca de su uso del website (incluyendo su dirección IP) será directamente transmitida y archivada por Google en los servidores de Estados Unidos. Google usará esta información por cuenta nuestra con el propósito de seguir la pista de su uso del website, recopilando informes de la actividad del website y prestando otros servicios relacionados con la actividad del website y el uso de Internet. Google podrá transmitir dicha información a terceros cuando así se lo requiera la legislación, o cuando dichos terceros procesen la información por cuenta de Google. Google no asociará su dirección IP con ningún otro dato del que disponga Google. Puede Usted rechazar el tratamiento de los datos o la información rechazando el uso de cookies mediante la selección de la configuración apropiada de su navegador, sin embargo, debe Usted saber que si lo hace puede ser que no pueda usar la plena funcionabilidad de este website. Al utilizar este website Usted consiente el tratamiento de información acerca de Usted por Google en la forma y para los fines arriba indicados. 
+
+* Cesión de datos personales de los Usuarios a terceros 
+
+El propietario del website no cederá los datos personales de los usuarios que se recogen a través del website a terceros sin su consentimiento expreso. Sin perjuicio de lo anterior, el usuario consiente en que se cedan sus datos personales cuando así sea requerido por las Autoridades administrativas competentes o por mandato judicial. 
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Titularidad y Propiedad Intelectual e Industrial">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+
+
+Salvo que se indique lo contrario, este Sitio Web, todos sus textos, imágenes, marcas, logos y otros contenidos dentro del mismo (en adelante, el "Contenido del Sitio Web") son titularidad (© Copyright) de TRIPORG, S.L. que posee y se reserva todos los derechos sobre el mismo, en particular pero sin limitación, los de propiedad intelectual e industrial. TRIPORG, el logotipo de TRIPORG, y todas las demás marcas que aparecen en el Sitio Web (en adelante, las "Marcas Registradas") están registradas y/o son propiedad de TRIPORG y/o de terceras partes. Ninguna mención y ningún contenido en este Sitio Web podrán ser interpretados como la concesión o el otorgamiento, bien por implicación, ocupación, derivación, cesión o de cualquier otra forma, de una licencia o derecho sobre las Marcas Registradas, salvo con la autorización previa y por escrito de TRIPORG o de dicha tercera parte que sea titular de las Marcas Registradas. 
+
+Los textos, sonidos, animaciones, botones, elementos gráficos que constituyen el WEBSITE, así como su presentación, montaje y estructura de navegación, son titularidad exclusiva del propietario del website, a no ser que se especifique lo contrario o éste ostenta los derechos de explotación necesarios. Sin perjuicio de lo anterior, los nombres comerciales, marcas o signos distintivos que aparecen a los que se hace alusión en este website pertenecen a sus respectivos propietarios y se encuentran protegidos por la legislación vigente al respecto. 
+
+Los derechos de propiedad intelectual de los colaboradores del propietario que publiquen sus artículos o trabajos en este sitio web corresponderán a sus autores. El envío de dichas colaboraciones al propietario supondrá una cesión gratuita de sus derechos para la publicación de las mismas a través de nuestros sitios web. 
+
+Dichos contenidos, la marca "Triporg", y los nombres de dominio www.triporg.org, www.triporg.eu, www.triporg.es y www.triporg.net están protegidos por las leyes y tratados sobre propiedad intelectual e industrial y por la normativa reguladora de los nombres de dominio, y se encuentran, en su caso, debidamente registrados. 
+
+Sin perjuicio de los usos permitidos de acuerdo con las presentes Condiciones de Uso o en los supuestos establecidos en los artículos 31 a 34 de la Ley de Propiedad Intelectual ( Real Decreto Legislativo 1/1996, de 12 de abril ), los derechos de divulgación, reproducción, distribución, comunicación pública y transformación de los contenidos de esta web corresponde exclusivamente al propietario. 
+
+El uso de enlaces a las páginas internas de las webs del propietario (deep linking) requerirá el consentimiento previo por parte de dicha entidad. 
+
+Se autoriza a los usuarios de este sitio web la visualización, reproducción, impresión y descarga parcial del contenido de la web exclusivamente si concurren las siguientes condiciones: 
+
+1. Que sea compatible con los fines de la web y que no perjudique la imagen y buen nombre del propietario, sus proveedores, o los productos o servicios de éstos. 
+
+2. Que se realice un uso personal y privado de los mismos. Se prohíbe expresamente toda explotación o utilización con fines comerciales o promocionales. 
+
+3. Que se respeten los derechos de propiedad intelectual o industrial del propietario. En ningún caso se permitirá la modificación, total o parcial, de dichos contenidos, ni su descompilación o la alteración de su integridad. En todo caso, deberá incluirse, refiriéndose al propietario, la mención “copyright”, o su signo equivalente (©), en cualquier divulgación, reproducción, distribución o comunicación pública de los contenidos de esta web. 
+
+El incumplimiento de las condiciones anteriores constituirá una actividad ilícita, que podrá dar lugar a las correspondientes sanciones civiles o penales conforme a la legislación aplicable. 
+
+Se prohíbe cualquier uso, transformación o explotación de los contenidos incluidos en el website con finalidades contrarias a la ley, moral u orden público. 
+
+Uso del Sitio Web
+
+TRIPORG te autoriza a visualizar, descargar e imprimir el Contenido del Sitio Web siempre bajo las siguientes condiciones: 
+
+(i) debes hacerlo exclusivamente para tu uso personal y no comercial; 
+(ii) no debes modificar el Contenido del Sitio Web; (iii) cualquier muestra o copia impresa del Contenido del Sitio Web debe ser marcada con "(c) 2011, TRIPORG, S.L. Todos los derechos reservados."; 
+(iv) no debes eliminar o modificar ninguna mención o notificación relativa a la titularidad de los derechos de autor, de las marcas, ni ninguna otra disposición sobre propiedad intelectual incluidas en el Contenido del Sitio Web por TRIPORG; 
+(v) no debes reproducir, crear trabajos derivados, comunicar al público, poner a disposición, distribuir o mostrar el Contenido del Sitio Web, salvo en la forma en que expresamente este permitido en este documento. 
+
+Excepto en los casos en que expresamente se permita en estos Términos y Condiciones, copiar, transmitir, reproducir, publicar, republicar, exponer, comunicar, transformar o redistribuir el Contenido del Sitio Web o cualquier parte del mismo está estrictamente prohibido sin la previa autorización escrita de TRIPORG. Para solicitar autorización puedes contactar con TRIPORG en la siguiente dirección: 
+
+  Director of Business Development 
+  TRIPORG, S.L. 
+  Calle Colón de Larreategui, 18 – 2º Izq-Dch. 48.001 
+  Bilbao – Bizkaia (España) 
+  Email: triporg@triporg.org 
+
+Tú reconoces y garantizas que el uso que realices del Contenido del Sitio Web será acorde con la licencia aquí contenida, no infringirás los derechos de cualquier tercero, ni incumplirás ninguna obligación legal o contractual que tengas con otras personas, y tampoco violarás ninguna ley aplicable. Expresamente aceptas mantener indemne a TRIPORG ante cualquier responsabilidad frente a cualquier persona, que pudiera derivarse de un uso del Contenido del Sitio Web por tu parte, que no fuese acorde con estos Términos y Condiciones. Tú garantizas que tienes por lo menos 18 años, y que tienes capacidad legal suficiente para aceptar este contrato y para usar el Sitio Web de acuerdo con estos Términos y Condiciones. 
+
+El uso del Sitio Web de acuerdo con estos Términos y Condiciones no implica ningún coste ni carga para los usuarios del Sitio Web. No obstante, el Sitio Web contiene enlaces a otros sitios web que son titularidad o propiedad de otros prestadores de servicios o comerciantes independientes. En algunos casos, el uso de determinados servicios o contenidos proporcionados por estos terceros independientes puede implicar el pago de un precio. Por esta razón debes llevar a cabo las averiguaciones que creas necesarias o apropiadas antes de proceder a realizar cualquier transacción con cualquier tercera persona, para determinar si dicho servicio o contenido puede comportar un coste. 
+
+La información sobre costes y cargos de estos terceros proveedores que pueda proporcionar TRIPORG en su Sitio Web es meramente orientativa e informativa. De ningún modo TRIPORG garantiza que esta información sea correcta, ni tampoco TRIPORG está asociada de ningún modo con dichos sitios web. 
+
+EXCLUSIÓN DE GARANTIAS Y LIMITACIÓN DE RESPONSABILIDAD
+
+TRIPORG NO PROVEE NINGUNA GARANTÍA Y/O REPRESENTACIÓN EN CUANTO A LA IDONEIDAD DEL CONTENIDO DEL SITIO WEB, O DE CUALQUIER PARTE DEL MISMO, PARA CUALQUIER PROPÓSITO. EL SITIO WEB SE PROPORCIONA "COMO ESTÁ", Y DENTRO DE LOS LÍMITES PERMITIDOS POR LA LEY, TRIPORG EXPRESAMENTE EXCLUYE CUALQUIER TIPO GARANTÍA DE COMERCIABILIDAD Y/O DE APTITUD PARA UN PROPÓSITO O RESULTADO DETERMINADO, INCLUIDAS CUALQUIER GARANTÍA IMPLÍCITA. IGUALMENTE, TRIPORG NO PROVEE GARANTIAS EN LO REFERENTE A LA EXACTITUD O LA PROPIEDAD DEL CONTENIDO DEL SITIO WEB. NINGUNA MENCIÓN INCLUIDA EN ESTE CONTRATO LIMITARÁ LA RESPONSABILIDAD DE TRIPORG POR 
+
+(I) MUERTE O DAÑOS PERSONALES CAUSADOS POR NEGLIGENCIA; 
+(II) FRAUDE; 
+(III) DOLO O NEGLIGENCIA GRAVE; 
+(IV) CUALQUIER OTRA RESPONSABILIDAD QUE NO PUEDA SER EXCLUIDA DE ACUERDO CON LA LEY APLICABLE. 
+
+SIN PERJUICIO DE LO ANTEDICHO, TU UTILIZAS EL SITIO WEB BAJO TU PROPIO RIESGO, Y NI TRIPORG NI LAS PERSONAS QUE APORTAN INFORMACION Y MATERIALES PARA SU PUBLICACIÓN DENTRO DEL CONTENIDO DEL SITIO WEB SERÁN RESPONSABLES POR LOS DAÑOS Y PERJUICIOS, DE NINGUN TIPO, QUE DERIVEN DEL USO QUE TÚ REALICES DEL SITIO WEB Y/O DEL CONTENIDO DEL SITIO WEB, INCLUYENDO, SIN LIMITACION, CUALQUIER DAÑO, PÉRDIDA O PERJUICIO DIRECTO, INDIRECTO, PENAL O CONSECUENCIAL, O CUALQUIER PÉRDIDA DE INGRESOS, BENEFICIOS, REPUTACIÓN, DATOS, CONTRATOS, USO DE DINERO, O CUALQUIER DAÑO O PÉRDIDA EN CONEXIÓN CON O CAUSADOS POR UNA INTERRUPCIÓN DE NEGOCIO DE CUALQUIER CLASE, BIEN SEA RESPONSABILIDAD CONTRACTUAL, EXTRACONTRACTUAL O DE CUALQUIER OTRO TIPO (INCLUYENDO, EN PARTICULAR PERO SIN LIMITACIÓN, LA NEGLIGENCIA), EN CONEXIÓN CON EL SERVICIO O CON ESTE SITIO WEB, O EN CONEXIÓN CON EL USO, LA IMPOSIBILIDAD DE USO O LOS RESULTADOS DEL USO DE ESTE SITIO WEB. DADO QUE ALGUNAS JURISDICCIONES/ESTADOS NO PERMITEN LA EXCLUSIÓN O LIMITACIÓN DE RESPONSABILIDAD POR DAÑOS CONSECUENCIALES, INCIDENTALES O INTENCIONALES, LAS LIMITACIONES EXPUESTAS EN ESTE PÁRRAFO PUEDE QUE NO TE SEAN APLICABLES. 
+
+El propietario del website presta sus servicios y contenidos de forma continuada empleando todos los medios técnicos a su alcance para realizar dicha prestación de forma satisfactoria. 
+
+Los contenidos de este sitio web no constituyen ni sustituyen un asesoramiento profesional, por lo que el titular del website se exime de cualquier responsabilidad, directa o indirecta, que pudiera derivarse del uso o aplicación de la información de esta web fuera de sus propósitos. 
+
+El propietario del website podrá realizar modificaciones en la información contenida en el website y en los servicios que se prestan a través de él sin que ello de derecho a reclamación o indemnización alguna para el usuario. 
+
+Las opiniones vertidas en los artículos, trabajos, foros o listas de correo que proporciona este sitio web pertenecen a su autor o signatario de los mismos, y no reflejan necesariamente los puntos de vista del propietario. 
+
+Los textos sobre los contenidos objeto del website que aparecen se ofrecen con una finalidad informativa o divulgativa. El propietario intentará velar por la actualidad, exactitud y veracidad de los mismos, si bien advierte que pueden no ser los contenidos oficiales y declina toda responsabilidad por los daños que puedan causarse debido a las inexactitudes, omisiones o incorrecciones de los mismos. El propietario no responderá de los daños o perjuicios causados por decisiones tomadas con base en la información difundida por este medio. 
+
+El usuario es el único responsable frente a cualquier reclamación o acción legal, judicial o extrajudicial, iniciada por terceras personas contra el propietario, basada en la utilización por el usuario del website. En su caso, el usuario asumirá cuantos gastos, costes e indemnizaciones sean irrogados al propietario con motivo de tales reclamaciones o acciones legales. 
+
+Los únicos textos considerados legalmente válidos son los que aparecen en las publicaciones oficiales de los correspondientes centros, hoteles, teatros, cines, escenarios, festivales... 
+
+Asimismo, en este sitio aparecen enlaces o conexiones con otros sitios web de terceros, sobre los que el propietario no tiene control alguno. Esta información se proporciona únicamente a título informativo, sin que ello suponga necesariamente la aprobación del contenido de los mismos por parte del propietario, ni la veracidad o licitud del contenido o información a que se puede acceder, ni la existencia de ningún tipo de asociación entre el propietario y las personas o entidades que los operan, ni garantiza la ausencia de virus u otros elementos en los mismos que puedan producir alteraciones en el sistema informático (hardware y software), en los documentos o los ficheros del usuario, excluyéndose toda responsabilidad por los daños de cualquier clase causados al usuario por estos motivos. 
+
+El propietario del website no se hace responsable por los daños y perjuicios de cualquier naturaleza que pudieran derivarse de la no disponibilidad o continuidad del funcionamiento del website. Asimismo, el titular del website no se hace responsable de los fallos o daños, directos o indirectos, que puedan causarse al sistema informático del usuario o a los ficheros almacenados en el mismo, como consecuencia de virus o cualquier otra aplicación informática maligna que pudiera estar alojada en el website. De igual manera se informa al usuario de que este website contiene multitud de plugins instalados cuya seguridad o fiabilidad no puede ser probada con anterioridad a su puesta en funcionamiento; no obstante, éstos sólo se adquieren de fuentes o catálogos oficiales por lo que dicha fiabilidad se presume, no se garantiza. 
+
+El propietario del website no se hace responsable por los daños y perjuicios de toda naturaleza que pudieran derivarse del conocimiento que puedan tener terceros no autorizados de los datos de los usuarios y del uso que hagan con ellos. 
+
+El propietario del website no se hace responsable de los contenidos, expresiones u opiniones vertidas y publicadas por los usuarios del sitio web, siendo estos últimos sus únicos responsables a todos los efectos. El propietario se reserva el derecho a realizar cualquiera acción u operación de moderación, incluyendo la edición o supresión de mensajes ofensivos, groseros o cualquiera otros que considere inapropiados. 
+
+Enlaces a otras páginas
+
+El Sitio Web contiene enlaces a sitios web de terceros. Los sitios enlazados no están bajo el control de TRIPORG, y TRIPORG no es responsable por los contenidos expuestos en dichos sitios enlazados. TRIPORG facilita estos links como facilidad y por conveniencia para el usuario, y el enlace no implica la aceptación, aprobación, patrocinio o afiliación con el sitio enlazado por TRIPORG. Los sitios enlazados pertenecen y son dirigidos por otros prestadores de servicios o comerciantes independientes por lo que TRIPORG no puede asegurar tu plena satisfacción con los productos, servicios o prácticas empresariales de estas terceras personas. Debes llevar a cabo las averiguaciones que consideres pertinentes o apropiadas antes de realizar cualquier operación con estos terceros. 
+
+Uso de las salas de chat, tablones de anuncios y otros foros de comunicación
+
+El Sitio Web puede contener y permitir a sus usuarios la publicación de material y/o revisiones de sus experiencias de viaje, así como la publicación de mensajes de carácter general u otras comunicaciones en las salas de chat, tablones de anuncios o cualquier otro tipo de foro (en adelante, los "Mensajes"). En caso de que TRIPORG ofrezca estos servicios, tú expresamente aceptas utilizarlos solo para enviar Mensajes apropiados y que sean acordes con el tema concreto para el que se creó dicho foro. 
+
+TRIPORG no edita ni controla los Mensajes publicados o difundidos en este Sitio Web, incluyendo a través de las salas de chat, tablones de anuncios o de cualquier otro tipo de foro, y no será responsable en ninguna forma por los Mensajes enviados por los usuarios. En cualquier caso, TRIPORG se reserva el derecho a retirar, a nuestra completa discreción y sin notificación previa, cualquier Mensaje de los usuarios y/o Contenido del Sitio Web. 
+
+A continuación se expone una lista no exhaustiva de la clase de Mensajes que son ilegales o están prohibidos en el Sitio Web. TRIPORG se reserva el derecho a modificar esta lista en cualquier momento, y a investigar y emprender, de modo unilateral, las pertinentes acciones legales contra cualquiera que viole esta disposición, incluyendo, sin limitación, la retirada de las comunicaciones que pudiesen ofender y cancelando el derecho de dichos infractores a utilizar el Sitio Web. Esta lista incluye los Mensajes que: 
+· son claramente ofensivos a la comunidad "online", como por ejemplo aquellos que fomenten el racismo, la intolerancia, el odio o cualquier daño físico, bien contra personas individuales o contra un grupo de personas; 
+· acosen o fomenten el acoso a otras personas; 
+· impliquen el envío de "e-mails basura", "cartas en cadena" o el envío masivo de correos no solicitados o "spam"; 
+· sean difamatorios o calumniosos; 
+
+· contengan información que tú sepas que es falsa, errónea o que fomente actividades ilegales o promueva conductas que sean abusivas, intimidatorias u obscenas; 
+· promueven la realización de copias ilegales o no autorizadas de obras protegidas por derechos de propiedad intelectual de otra persona, tales como los que ofrecen programas informáticos pirateados o enlaces a los mismos, los que proporcionen información para eludir los sistemas anticopia, o los que proporcionen música pirateada o enlaces para acceder a música pirateada; 
+· contengan contraseñas a páginas de acceso restringido, o imágenes o páginas ocultas (aquellas que no hayan sido enlazadas para o desde otras páginas accesibles); 
+· proporcionen información sobe actividades ilegales tales como comprar o construir armas ilegales, violar la intimidad de otras personas, o proporcionar o crear virus informáticos; 
+· constituyan o realicen apología de conductas que puedan ser consideradas criminales, o que puedan dar lugar a responsabilidad civil, o sean contrarias a la ley o infrinjan los derechos de cualquier tercero en cualquier parte del mundo; 
+· implique actividades comerciales y/o ventas sin nuestro consentimiento previo por escrito, tales como concursos, loterías, porras, trueques, publicidad o estrategias piramidales. 
+
+Mediante el envío o distribución de Mensajes de usuarios en el Sitio Web, expresamente cedes de forma irrevocable a TRIPORG y a sus afiliados, todos aquellos derechos que sean necesarios para comunicar y poner a disposición del público dichos Mensajes de usuarios, y dichos Mensajes de usuario podrán ser libremente usados, copiados, publicados, traducidos o distribuidos en cualquier medio o forma por cualquier persona, incluido en anuncios publicitarios o en conexión con actividades comerciales, sin necesidad de autorización previa por tu parte. Te comprometes a no enviar o distribuir ninguna información o material que este protegida por derechos de propiedad intelectual de terceros, sin el expreso consentimiento de dichos terceros, y aceptas resarcir y mantener indemne a TRIPORG frente a cualquier reclamación derivada del incumplimiento de esta obligación. 
+
+Política de notificación y retirada de contenidos ilegales
+
+TRIPORG funciona facilitando un procedimiento de notificación y retirada de contenidos. Si tienes alguna objeción o queja respecto al material o contenido, incluyendo quejas relativas a Mensajes de los usuarios publicados en el Sitio Web, o si crees que el material o contenido publicado en el Sitio Web vulnera algún derecho de propiedad intelectual de tu titularidad, por favor, contáctanos inmediatamente siguiendo nuestro procedimiento de notificación y retirada de contenidos. Una vez el procedimiento ha sido iniciado, TRIPORG llevará a cabo los pasos pertinentes para retirar los contenidos ilegales, en un plazo razonable de tiempo. 
+
+Privacidad
+
+Cualquier información personal que nos comuniques a través del Sitio Web será tratada de acuerdo con nuestra Política de Privacidad. 
+
+Ley aplicable y jurisdicción competente
+
+El presente AVISO LEGAL así como el resto de los contenidos del website se rigen por las leyes españolas, quedando sometida a la jurisdicción de los Tribunales de Bilbao cualquier disputa, reclamación o controversia sobre los mismos. 
+
+Para cualquier duda relacionada con el presente AVISO LEGAL, el usuario podrá ponerse en contacto con el propietario del website mediante comunicación a la dirección de correo: triporg@triporg.org 
+
+El Sitio Web (excluyendo los enlaces a terceros) es controlado por TRIPORG, S.L. y administrado por TRIPORG, S.L.desde sus oficinas situadas en Calle Colón de Larreategui, 18 – 2º Izq-Dch. 48.001 Bilbao – Bizkaia (España). Mediante la publicación, acceso y/o uso de este Sitio Web, tú y TRIPORG expresamente aceptáis que todas las disputas, reclamaciones y otras cuestiones derivadas o relacionadas con tu uso del Sitio Web quedarán sujetas a las leyes de Bilbao – Bizkaia (España), sin perjuicio de los principios que regulan los conflictos de leyes. Tú aceptas que todas las reclamaciones o quejas que tengas contra TRIPORG, S.L. que provengan o estén relacionadas con el funcionamiento o el uso del Sitio Web serán resueltas por el tribunal competente situado en Bilbao – Bizkaia (España). Lo anterior no será aplicable en aquellos casos en que la ley de tu país de residencia requiera la aplicación de otra ley o jurisdicción, siempre y cuando no sea posible la exclusión contractual de esta disposición legal. 
+
+Modificaciones
+
+El propietario se reserva la facultad de efectuar, en cualquier momento y sin necesidad de previo aviso, modificaciones y actualizaciones de la información contenida en el website, de la configuración, disponibilidad y presentación de ésta, así como de las presentes Condiciones de Uso. 
+
+TRIPORG se reserva el derecho a modificar, añadir o eliminar en cualquier momento y de forma unilateral estos Términos y Condiciones, la información contenida en el website, de la configuración, disponibilidad y presentación de ésta, bien de modo parcial o en su totalidad, si así lo considerase necesario, bien por causas legales, normativas generales o por causas técnicas, o debido a cambios en los servicios proporcionados o en la naturaleza o disposición del Sitio Web. TRIPORG te comunicará dichos cambios en un plazo razonable de tiempo. Desde ese momento expresamente aceptas quedar vinculado bajo dichos Términos y Condiciones con sus modificaciones. 
+
+TRIPORG se reserva el derecho a cambiar, suspender, o finalizar en cualquier momento cualquier aspecto del servicio de TRIPORG, incluyendo la disponibilidad de cualquier prestación, facilidad, base de datos o contenido. Igualmente, TRIPORG podrá imponer límites a determinadas facilidades y servicios o restringir tu acceso a determinadas partes o a todo el Sitio Web o cualquier otra sitio web de TRIPORG, sin necesidad de notificarlo previamente, y sin incurrir en responsabilidad alguna, bien por razones técnicas o de seguridad, para prevenir o evitar accesos no autorizados, pérdidas o destrucción de datos, o cuando consideremos, a nuestra entera discreción, que tú has incumplido estos Términos y Condiciones o cualquier ley o normativa aplicable, y cuando TRIPORG decida suspender la prestación de un servicio. 
+
+EL ACCESO CONTINUADO A TRIPORG A PARTIR DE AHORA, O A PARTIR DE LA PUBLICACIÓN DE CUALQUIER NOTIFICACIÓN SOBRE MODIFICACIONES INTRODUCIDAS, IMPLICARÁ LA ACEPTACION DE LOS TERMINOS Y CONDICIONES, INCLUYENDO LOS POSIBLES CAMBIOS QUE SE HAYAN EFECTUADO. 
+
+General
+
+Si alguna parte o cláusula de estos Términos y Condiciones es declarada nula o sin efecto, incluyendo, en particular pero sin limitación, la renuncia de garantías y las limitaciones de responsabilidad mencionadas anteriormente, la cláusula así declarada se entenderá sustituida por aquella otra que sea válida y que más se acerque a las intenciones de la cláusula original, y las restantes partes de estos Términos y Condiciones conservarán su validez. 
+
+TRIPORG podrá, mientras que tú no podrás, ceder, transmitir, subcontratar o delegar derechos, obligaciones o deberes bajo estos Términos y Condiciones. 
+
+Reconoces y aceptas que no existe ninguna asociación, relación laboral o de agencia, o "joint venture" entre TRIPORG y tú, como resultado de estos Términos y Condiciones o por el uso de este Sitio Web. 
+
+Estos Términos y Condiciones se encuentran solo disponibles en el idioma del Sitio Web. Los Términos y Condiciones que tú personalmente aceptes no serán almacenados de modo individual. 
+
+El Sitio Web no se actualiza de modo periódico y por ello no es necesario registrarlo como producto editorial bajo ninguna ley aplicable. 
+
+Política de Privacidad
+
+Este sitio Web (en adelante, el “Sitio Web") está gestionado por TRIPORG, S.L., con sede en Calle Colón de Larreategui, 18 – 2º Izq-Dch. 48.001 Bilbao – Bizkaia (España). 
+
+TRIPORG ofrece esta Política de Privacidad porque valoramos su derecho a la intimidad. 
+
+La misma comenzará a surtir efecto el 17 de noviembre de 2011, y regula la recopilación y el uso de información personal a través de este Sitio Web a partir de esta fecha. 
+
+Esta Política describe los tipos de información que TRIPORG recopila de sus usuarios y la forma en que dicha información es usada. Lea atentamente esta Política antes de facilitarnos cualquier información personal. Al usar este Sitio Web, usted acepta que TRIPORG utilice su información personal de acuerdo con esta Política. Si no está de acuerdo con los términos de la misma, por favor no utilice este Sitio Web. Si tiene alguna pregunta sobre esta Política, puede enviarnos un e-mail a triporg@triporg.org con el asunto “PRIVACIDAD”. 
+
+Información que recopilamos: 
+
+1. Usuarios no registrados'
+
+
+Le animamos a que se registre con nosotros para poder beneficiarse de las muchas facilidades de personalización de TRIPORG. Sin embargo, también puede que no desee registrarse y sí beneficiarse de las facilidades de nuestro Sitio Web que no requieren que se registre con antelación. 
+
+Si no se registra, la información que recopilamos sobre usted es limitada. Registramos su dirección IP para poder detectar posibles problemas con nuestro servidor, administrar nuestro Sitio Web y localizar estadísticas de uso. Su dirección IP puede variar cada vez que visite el Sitio Web o puede que siga siendo la misma, dependiendo de si accede a nuestro Sitio Web a través de una conexión permanente de Internet (como por ejemplo, módem de cable o DSL), o mediante una conexión de marcado o “dial-up” (como AOL o Earthlink). De cualquier forma, sería extremadamente difícil para nosotros identificarle mediante su dirección IP, y tampoco lo intentaremos. Si ha llegado a nuestro Sitio Web haciendo clic en un enlace o anuncio de otro sitio web, entonces también recopilaremos esa información. Esto nos ayuda a maximizar nuestra difusión en Internet y a comprender lo que interesa a nuestros usuarios. Toda esta información se recopila y se utiliza solamente en su conjunto; es decir, se introduce en nuestra base de datos, donde la podemos usar para generar informes globales sobre nuestros visitantes, pero no informes sobre visitantes individuales. 
+
+También guardamos un pequeño archivo llamado "cookie" en el disco duro de su ordenador. Una cookie puede contener información que nos permite seguirle a través de nuestro Sitio Web y determinar si nos ha visitado con anterioridad. Sin embargo, a menos que usted se registre con nosotros, este archivo no contiene ninguna información personal que nos permita identificarle. Las cookies no pueden ser usadas para leer información en su disco duro ni tampoco obtener información de otras cookies creadas por otros sitios web. Nosotros utilizamos las cookies de esta forma para ayudarnos a comprender cómo usan los visitantes nuestro Sitio Web y para ayudarnos a mejorarlo. 
+
+Usted puede rechazar nuestras cookies siguiendo los procedimientos específicos de su navegador de Internet. Aunque puede hacer esto, también puede encontrarse no sólo con que su navegador no reacciona adecuadamente cuando visite nuestro Sitio Web, sino tampoco al visitar otros. Como quiera que las cookies no nos proporcionan ninguna información para poder identificarle, le sugerimos que nos permita colocar una en su ordenador para que pueda disfrutar plenamente de las prestaciones de nuestro Sitio Web. Si visita nuestro Sitio Web haciendo clic desde un sitio web gestionado por uno de nuestros socios, y usted está registrado con ese socio, entonces puede que nos sea transmitida la información que le haya proporcionado a nuestro socio sobre usted. Debe revisar la política de privacidad del sitio web desde el cual ha llegado al nuestro, para poder determinar qué información fue recopilada y de qué forma ha aceptado que nuestro socio pudiera utilizar la misma. No obstante, independientemente de la información que nos haya sido trasmitida, no la guardaremos a menos que se registre con nosotros. 
+
+Si accede a servicios de terceros, como servicios de medios sociales, ya sea mediante nuestro Sitio Web o antes de acceder a nuestro Sitio Web, podemos recopilar información como su nombre de usuario, contraseña u otra información accesible para nosotros mediante dichos servicios para mejorar y personalizar el uso de nuestro Sitio Web. 
+
+Nos hemos asociado con Facebook para ofrecer una Personalización instantánea en TRIPORG para los miembros de Facebook. Si la Personalización instantánea está activada en la configuración de privacidad de su cuenta de Facebook y ha iniciado sesión en Facebook, TRIPORG se personalizará para usted cuando visite el Sitio Web, incluso si es la primera vez que utiliza el sitio Web de TRIPORG. Por ejemplo, le mostraremos las críticas que sus amigos de Facebook han publicado en TRIPORG y los lugares que han visitado. Para ofrecerle esta experiencia personalizada, Facebook nos facilita la información que usted ha escogido que esté disponible de acuerdo con la configuración de privacidad de su cuenta de Facebook. Dicha información puede incluir su nombre, foto de perfil, sexo, listas de amigos y cualquier otra información que haya escogido que esté disponible. 
+
+Cuando visite TRIPORG por primera vez, verá una opción para desactivar la Personalización instantánea con un solo clic. Si decide desactivarla en otro momento, puede hacerlo si primero inicia sesión en Facebook y hace clic en el enlace de desactivación de esta página o bien, si se desplaza hacia arriba hasta el enlace "¿Obtener más información?" en la parte superior de la página de TRIPORG y hace clic en "¿Cómo desactivar la personalización?". También puede desactivar la Personalización instantánea si edita la configuración de privacidad de su cuenta de Facebook. Tenga en cuenta que, si tiene amigos en Facebook que estén utilizando TRIPORG, también podrían haber compartido información acerca de usted con nosotros a través de Facebook. Si no desea que dicha información se comparta, puede hacerlo si edita la configuración de privacidad de su cuenta de Facebook. 
+
+2. Usuarios registrados
+
+Si decide registrarse con nosotros, podrá añadir contenidos a nuestro Sitio Web. Por ejemplo, podrá publicar sus comentarios y participar en nuestros foros. También podrá enviar a su correo electrónico y al de otras personas los contenidos de TRIPORG. 
+
+Además, podrá personalizar su experiencia en el Sitio Web de TRIPORG. Las ventajas de registrarse aumentarán con el tiempo según vayamos conociéndole mejor e introduciendo nuevas prestaciones. ¡Le animamos a registrarse para que pueda experimentar todo lo que TRIPORG puede ofrecerle! 
+
+Si se registra con nosotros, recopilaremos información personal sobre usted, además de la información no personal descrita más arriba. Esa información personal incluirá la que usted introduzca en nuestros formularios, tales como nombre, dirección de e-mail, dirección postal, número de teléfono, preferencias de viajes, nombre de usuario, contraseña e información de contacto para otras personas. Podemos almacenar toda esta información, o parte de la misma, en una cookie o en su disco duro, para que nuestro sistema le reconozca cada vez que visite nuestro Sitio Web. De esta forma, podemos guardar sus preferencias en cada una de las visitas que nos haga y presentarle un Sitio Web personalizado, sin que tenga que registrarse cada vez que entre en el mismo. Para mejorar los servicios y la personalización, podemos obtener periódicamente información suya de otras fuentes de terceros independientes de los que hayamos obtenido legalmente esta información, agregándola a la que aparece en su registro. Asimismo, el personal autorizado de TRIPORG puede actualizar la información de su registro para que refleje exactamente cualquier nuevo dato incluido en las comunicaciones que recibamos de usted. 
+
+Si visita nuestro sitio Web haciendo clic desde un sitio web gestionado por uno de nuestros socios, y está registrado con el mismo, puede ser que la información sobre usted que haya proporcionado a ese socio nos sea transmitida. Debe revisar la política de privacidad del sitio web desde el que ha accedido al nuestro, para poder determinar qué información ha sido recopilada y de qué forma usted ha aceptado que nuestro socio utilice esa información. Nosotros podremos o no guardar esa información; pero si lo hacemos, sólo la utilizaremos de acuerdo con nuestra Política de Privacidad, independientemente de la política del sitio web del socio desde el que usted accedió a nuestro Sitio Web. 
+
+Si accede a nuestro Sitio Web a través de uno de nuestros socios (esté o no registrado con el mismo) y decide registrarse con nosotros, puede que se nos requiera que entreguemos a nuestro socio parte o toda la información de su registro. Sólo haremos esto de acuerdo con esta Política, pero no podemos controlar la forma en que nuestro socio utilice la información. Si tiene alguna pregunta sobre la política de privacidad de nuestro socio, debe revisarla antes de facilitarnos la información. Por supuesto, puede asegurarse de que la información personal que nos proporcione no será compartida con nuestros socios (excepto en lo relativo a esta Política), visitando directamente nuestro Sitio Web en lugar de hacer clic desde el sitio web de uno de nuestros socios. 
+
+Cómo utilizamos la información personal que recopilamos
+
+¡Utilizamos la información personal que recopilamos para ayudarnos mutuamente! Como hemos mencionado con anterioridad, al registrarse con nosotros puede personalizar nuestro Sitio Web para que le sea más útil. También le permite entrar en nuestro Sitio Web automáticamente, sin tener que teclear su nombre de usuario y contraseña cada vez que lo visite. Asimismo podemos usar su información personal para contactar periódicamente con usted con el fin de ofrecerle noticias o información importante de TRIPORG, comunicaciones de otros miembros de TRIPORG y/o pedirle su opinión sobre nuestro Sitio Web. Además de estas actualizaciones periódicas, podemos enviarle por e-mail material adicional, pero sólo si usted lo ha solicitado expresamente. Esto puede incluir boletines de inscripción expresa (“opt-in”) y otros materiales que solicite expresamente de TRIPORG. 
+
+Además de estas comunicaciones, si nos ha proporcionado una dirección de e-mail, podemos utilizar su información personal para enviarle notificaciones sobre las ofertas especiales o comentarle las oportunidades que ofrecen nuestros socios, siempre que dé su consentimiento (el cual puede retirar en cualquier momento de la forma estipulada en este documento). 
+
+Usted puede decidir dejar de recibir algunas o todas las comunicaciones de marketing procedentes de TRIPORG contenidas en los e-mails que le enviemos en cualquier momento, y también acceder a su información personal y actualizarla, conmunicandolo a triporg@triporg.org con el asunto “MAILING”. 
+
+También podemos usar determinada información que nos haya proporcionado para facilitarle cualquier publicidad que pueda interesarle. Esto nos beneficia a ambos. A nosotros, porque la publicidad ayuda a pagar las facturas y podemos facturar más a nuestros anunciantes si estos saben que sus anuncios serán vistos por alguien que puede encontrarlos de utilidad; y a usted porque ve una publicidad que puede ser de su interés, en vez de molestarle. 
+
+Puede cancelar su registro con nosotros enviando un e-mail a triporg@triporg.org con el asunto “UNREGISTER”. Le enviaremos un e-mail confirmando su solicitud. Después de recibir la confirmación, eliminaremos su información de nuestra base de datos en activo, aunque parte de la información puede permanecer en nuestros archivos por algún tiempo antes de ser borrada. Puede que no podamos eliminar su información de las bases de datos de nuestros socios, en caso de que les hayamos transmitido alguna a ellos. 
+
+Revelación de su información personal
+
+TRIPORG no vende ni alquila información personal a ningún tercero, con la excepción de nuestros socios, como ha quedado estipulado en esta Política. Puede también que generemos en forma conjunta información personal de nuestros usuarios y que proporcionemos esta información en conjunto a otras terceras partes, incluso anunciantes, con fines de marketing y de promoción. Sin embargo, si lo hiciéramos, esa información no se entregaría en una forma que permitiera a terceros identificarle a usted personalmente. 
+
+Es posible que compartamos parte de su información personal identificativa con nuestra matriz o con nuestras empresas filiales o asociadas en todo el mundo, dedicadas a proporcionarle una amplia colección de paquetes de viajes y servicios para satisfacer sus necesidades de viajes. Compartir esta información nos permite entender mejor la forma en que nuestras distintas ofertas de productos y servicios pueden ayudar a los viajeros. También nos permite suministrarle información sobre oportunidades de viajes que puedan interesarle. No limitamos el uso de la información personal por parte de nuestra matriz, las compañías filiales o asociadas, pero si que al menos dichas compañías tratarán la información de la misma forma con que tratan la información que obtienen de sus demás usuarios. También cumplirán con todas las leyes aplicables que regulan la transmisión de comunicaciones comerciales, y le ofrecerán la oportunidad, en cualquier e-mail de ese tipo que le envíen, de decidir si no desea recibir esos mensajes en el futuro. 
+
+POR FAVOR, TENGA EN CUENTA QUE LAS LEYES DE ESTADOS UNIDOS Y LA MAYORÍA DE LOS PAÍSES FUERA DEL ÁREA ECONÓMICA EUROPEA SON GENERALMENTE CONSIDERADOS PAÍSES QUE NO GARANTIZAR UN NIVEL UN NIVEL DE PROTECCIÓN ADECUADO RESPECTO A DATOS PERSONALES, SEGÚN SE CONTEMPLA EN EL ARTÍCULO 25 DE LA DIRECTIVA DE LA UNIÓN EUROPEA RELATIVA A LA PROTECCIÓN DE LAS PERSONAS FÍSICAS EN LO QUE RESPECTA AL TRATAMIENTO DE DATOS PERSONALES Y A LA LIBRE CIRCULACIÓN DE ESTOS DATOS (95/46/EC). AL ACEPTAR ESTA POLÍTICA DE PRIVACIDAD Y UTILIZAR EL SITIO WEB, USTED ESTÁ CONSINTIENDO A (i) LA TRANSFERENCIA DE SU INFORMACIÓN PERSONAL A ESTOS PAÍSES (ii) LA UTILIZACIÓN DE SU INFORMACIÓN PERSONAL EN ESOS PAÍSES DE ACUERDO CON ESTA POLÍTICA. 
+
+Puede que también compartamos su información personal con terceros específicamente contratados por TRIPORG para prestar servicios a TRIPORG (tales como agencias de estudio de mercado, proveedores de servicios de marketing y agencias de publicidad), en cuyo caso requeriremos a estas terceras partes que se comprometan a usar cualquier información personal identificativa únicamente con el propósito de prestar a TRIPORG los servicios específicos que se hayan contratado. Como debe suponer, TRIPORG debe cooperar con las autoridades, y bajo algunas circunstancias puede que le sea requerido revelar información personal identificativa en respuesta a peticiones de las autoridades competentes, o en respuesta a procedimientos judiciales. No esperamos que esto pueda ocurrir, pero si se diese el caso, sólo proporcionaremos la información requerida. En otras palabras, no revelaremos toda la información de nuestra base de datos en respuesta a un requerimiento legal específico. También podremos revelar información sobre usted si creemos que debemos hacerlo para prevenir una infracción de la ley, y al aceptar esta Política, usted da su consentimiento para que podamos tomar esta medida y llevarla a cabo a nuestra única discreción. Usted también consiente que revelemos información sobre usted en el curso de un procedimiento judicial si se nos requiere legalmente, y si creemos razonablemente que al hacerlo podrá disminuir nuestra responsabilidad, o si el hacerlo nos permitiría defender nuestros derechos legales. También podemos compartir su información si está relacionada con una transacción corporativa, como una venta de participaciones, fusión, consolidación o venta de activos, o en el caso poco probable de insolvencia. 
+
+Su perfil y contribuciones en TRIPORG se verán públicamente y se identificarán mediante su nombre de pantalla. TRIPORG anima a sus miembros a crear nombres de pantalla que no estén visiblemente relacionados con su nombre y apellidos. TRIPORG no compartirá su dirección de e-mail ni su nombre y apellidos con otros miembros, ni los mostraremos de ninguna manera pública, a menos que usted decida expresamente que lo hagamos. 
+
+Prestaciones de comunicación de miembro a miembro
+
+Cuando usted se inscribe en TRIPORG, se activan automáticamente las prestaciones de comunicación de miembro a miembro. Estas prestaciones, tales como redes de viajeros y mensajería privada, le permiten a usted y a otros miembros de TRIPORG comunicarse entre sí a través de TRIPORG, así como con otros que no sean miembros. 
+
+Los miembros de TRIPORG pueden desactivar estas prestaciones de miembro a miembro en cualquier momento, mediante su perfil de miembro, si así lo desean. 
+
+Si desea participar en estas prestaciones, usted admite que: 
+· desea aceptar la comunicación procedente de otros miembros de TRIPORG; 
+· ya ha obtenido el consentimiento previo de los contactos en la libreta de direcciones de su correo electrónico para que les enviemos comunicaciones en su nombre. 
+
+Los no miembros siempre tienen la opción de dejar de recibir más comunicaciones de los miembros de TRIPORG. 
+
+Hemos diseñado estas prestaciones para evitar cualquier revelación de su información personal a otros usuarios y para permitirle a usted rehusar su participación, si así lo deseara. Su dirección de correo electrónico nunca se revelará a otros miembros de TRIPORG o viceversa. 
+
+Cómo puede revisar y actualizar su información personal
+
+Usted puede revisar y actualizar la información personal que ha proporcionado a través del proceso de registro, visitando www.triporg.org y accediendo a la opción “Mi cuenta”. Puede acceder a su información personal y, cuando se muestre algún dato incorrecto, corregirla. Puede ponerse en contacto con nosotros en triporg@triporg.org si lo desea. 
+
+Medidas que tomamos para proteger su información personal
+
+TRIPORG ha implementado procedimientos de seguridad para ayudar a proteger la información personal almacenada en nuestros sistemas. Por ejemplo, sólo permitimos el acceso a su información personal a aquellos empleados que razonablemente consideramos tienen necesidad de entrar en contacto con dicha información. También empleamos procesos (tales como verificación de contraseñas, auditoría de accesos y caducidad de sesión) para proteger y evitar el acceso no autorizado a su información personal. A pesar de que aplicamos las medidas técnicas y organizativas de protección apropiadas contra el procesamiento ilegal o no autorizado de la información personal y contra la pérdida o destrucción accidentales, o para impedir cualquier daño a la información personal, no hay modo alguno de que podamos garantizar la seguridad absoluta de su información personal. 
+
+Privacidad de los niños
+
+Este Sitio Web es un sitio de audiencia general. No tenemos constancia ni es nuestra intención recoger información sobre niños. En caso de que un niño, del que tuviéramos constancia que tiene menos de 13 años, nos enviase información personal, sólo utilizaríamos dicha información para responder directamente a dicho niño, e informarle que previamente necesitamos el consentimiento de sus padres para poder recoger su información personal. 
+
+Cambios en esta Política de Privacidad
+
+Nos reservamos el derecho de modificar esta Política si lo consideramos oportuno. En caso de realizar modificaciones sustanciales que pudieran afectar a la información personal que ya hemos recopilado sobre usted, haremos todos los esfuerzos razonables para notificarle los cambios y darle la oportunidad de modificar o cancelar su registro. 
+
+Procedimiento de Notificación y Retirada
+
+Dependiendo del tipo de queja o reclamación, por favor escoge uno de los siguientes formularios de notificación: 
+
+1. Notificación a Triporg sobre Contenidos Difamatorios
+
+Las declaraciones que son ciertas o que muestran una opinión honesta (como podría ser una crítica negativa) no tiene por qué ser generalmente considerada en sí misma como difamatoria. Debes considerar cuidadosamente los hechos antes de emprender una acusación o presentar una queja o reclamación (y requerir consejo legal si tuvieses dudas), puesto que una falsa acusación podría comportar responsabilidades para ti. 
+
+Triporg se reserva el derecho a requerir la verificación de tu identidad, y a averiguar más información sobre ti para clarificar los fundamentos de tu reclamación. Por favor, ten en cuenta que Triporg no podrá investigar aquellas reclamaciones que sean anónimas, o que estén incorrectamente enviadas, o que no contengan la suficiente información requerida en el Formulario de Notificación dispuesto más abajo. Haremos todo lo que esté a nuestro alcance para identificar contenidos difamatorios cuando éstos nos sean notificados, pero no seremos responsables si no se nos aportaron todos los datos o hechos relevantes, o si dichos hechos no pueden ser averiguados o investigados. Todos los datos personales que nos aportes serán usados de acuerdo con nuestra Política de Privacidad; te rogamos la revises antes de aportarnos cualquier dato personal. 
+
+Aviso: Cualquier declaración que se haga podrá ser utilizada en un procedimiento judicial. Cualquier información falsa, engañosa o imprecisa que nos remitas puede dar lugar a responsabilidad tanto civil como penal. 
+
+Si deseas notificar a Triporg una presunta declaración difamatoria contenida en nuestro Sitio Web, por favor, completa el “Formulario de Notificación a Triporg sobre Contenidos Difamatorios” que aparece más abajo, y envía una copia con la fecha y tu firma a: 
+
+Triporg, S.L. 
+Dpto. Notificación de contenidos 
+Colón de Larreategui, 18 – 2º Izq-Dch. 
+48.001 Bilbao – Bizkaia (España) 
+
+Deberás incluir también una dirección postal, un teléfono en el que sea posible localizarte durante el día y tu dirección de correo electrónico, para que así, Triporg pueda responder a tu notificación. 
+
+2. Formulario de Notificación a Triporg sobre Contenidos Difamatorios
+
+Yo, [indicar nombre completo] con domicilio en [indicar dirección postal, teléfono donde sea posible la localización durante el día y dirección de email], declaro lo siguiente: 
+
+1. En relación con el Sitio Web [por favor, indica el sitio web de Triporg de que se trate (Ej. www.triporg.org (en adelante, el “Sitio Web”), mediante la presente notificación comunico a Triporg que a través de dicho Sitio Web se está causando o contribuyendo a la publicación de contenido difamatorio. 
+
+2. En particular el contenido difamatorio aparece en el Sitio Web en [por favor, corta y pega aquí el contenido que consideras difamatorio y la dirección exacta de la página dentro del Sitio Web en la que aparecen las declaraciones difamatorias]. 
+
+3. Las palabras, expresiones o declaraciones que considero difamatorias son: [por favor, transcribe las palabras o expresiones exactas que aparecen en el Sitio Web, por las cuales estás reclamando]. 
+
+4. Considero que estas palabras, expresiones o declaraciones son difamatorias porque [por favor, indica las razones por las que consideras que estas palabras o expresiones son difamatorias]. 
+
+5. Las palabras o expresiones difamatorias son inciertas porque [por favor, indica las razones por las que las palabras o expresiones que denuncias son inciertas, y la que tu consideras que sería la correcta o verdadera exposición de los hechos]. 
+
+6. [Si la persona que firma esta notificación está actuando en nombre y representación del Reclamante, por favor, incluye la siguiente declaración: Yo estoy autorizado a actuar en nombre y representación del Reclamante. La [persona/entidad] que denuncia que las palabras y declaraciones son difamatorias es [por favor, indica el nombre y dirección de la persona/entidad] (en adelante “Reclamante”). Yo soy [por favor, indica la relación entre tú, como firmante de esta notificación, y el Reclamante] 
+
+Declaro que la reclamación y los hechos aquí expuestos son ciertos, y entiendo y acepto que esta notificación podrá ser utilizada en un procedimiento judicial en relación conesta reclamación por difamación. 
+
+Firmado: 
+
+
+
+Fecha: 
+
+Procedimiento de Notificación de Infracción de Derechos de Propiedad Intelectual
+
+Dependiendo del tipo de queja o reclamación, por favor escoge uno de los siguientes formularios de notificación: 
+
+1. Notificación de Infracción de Derechos de Propiedad Intelectual
+
+Si consideras que una obra o material ha sido utilizado de tal forma que se han infringido tus derechos de propiedad intelectual sobre la misma, por favor, notifícalo a Triporg utilizando el “Formulario de Notificación a Triporg de Infracción de Derechos de Propiedad Intelectual” que aparece más abajo. 
+
+Triporg se reserva el derecho a requerir la verificación de tu identidad, y a averiguar más información sobre ti para clarificar los fundamentos de tu reclamación. Por favor, ten en cuenta que Triporg no podrá investigar aquellas reclamaciones que sean anónimas, o que estén incorrectamente enviadas, o que no contengan la suficiente información requerida en el Formulario de Notificación dispuesto más abajo. Haremos todo lo que esté a nuestro alcance para identificar presuntos contenidos ilegales o infractores, pero no seremos responsables si no se nos aportaron todos los datos o hechos relevantes, o si dichos hechos no pueden ser averiguados. 
+
+Aviso: Cualquier declaración que se haga podrá ser utilizada en un procedimiento judicial. Cualquier información falsa, engañosa o imprecisa que nos remitas puede dar lugar a responsabilidad tanto civil como penal. 
+
+Si deseas notificar a Triporg una presunta infracción de derechos de propiedad intelectual en nuestro Sitio Web, por favor, completa el “Formulario de Notificación a Triporg de Infracción de Derechos de Propiedad Intelectual” que aparece más abajo, y envía una copia con la fecha y tu firma a: 
+
+Dpto. Notificación de contenidos 
+Colón de Larreategui, 18 – 2º Izq-Dch. 
+48.001 Bilbao – Bizkaia (España) 
+
+Deberás incluir también una dirección postal, un teléfono en el que sea posible localizarte durante el día y tu dirección de correo electrónico. 
+
+2. Formulario de Notificación de Infracción de Derechos de Propiedad Intelectual
+
+[indicar nombre completo] con domicilio en [indicar dirección postal, teléfono donde sea posible la localización durante el día y dirección de email], declaro lo siguiente: 
+
+1. En relación con el Sitio Web [por favor, indica el sitio web de Triporg de que se trate (Ej. www.triporg.org)] (en adelante, el “Sitio Web”), mediante la presente notificación comunico a Triporg que el contenido publicado en dicho Sitio Web, tal y como se identifica a continuación, está infringiendo o contribuye a infringir derechos de propiedad intelectual. 
+
+2. La(s) obra(s) sobre la/s que reclamo que existen derechos de propiedad intelectual reservados son [por favor, indica y describe claramente el material o la(s) obra(s) que consideras vulnerada/s] (en adelante, la “Obra”). 
+[Nota: Por favor, especifica también el o los derechos de propiedad intelectual específicos que consideras vulnerados – Ej. derechos de autor; patentes; marcas o nombres comerciales; diseños o modelos industriales –; y aporta, si fuese posible, datos sobre su registro] 
+
+3. El material o contenido que considero que infringe los derechos sobre la Obra (en adelante, el “Material Infractor”) es [por favor, identifica y describe de forma clara el material o contenido que presuntamente infringe los derechos sobre la Obra] 
+
+4. El Material Infractor aparece en el Sitio Web en [por favor, corta y pega aquí la dirección exacta de la página dentro del Sitio Web en la que aparece el material o contenido infractor]. 
+
+5. El uso del Material Infractor descrito en el párrafo 5 infringe [mis derechos] [o] [los derechos del Reclamante] [eliminar el que no corresponda] sobre la Obra, y dicho uso no está autorizado por el propietario de los derechos, ni por su(s) agente(s), ni por la ley. 
+
+6. [Actúo en mi propio nombre como] [o] [Actúo en nombre y representación del] propietario de un derecho exclusivo sobre la Obra que se reclama como vulnerada. [Si la persona que realiza esta declaración actúa en nombre y representación de un tercero reclamante, por favor, incluir lo siguiente]: La [persona/entidad] que declara que se han infringido sus derechos sobre la Obra es [por favor, indica el nombre y la dirección de la persona/entidad titular de los derechos] (en adelante, el “Reclamante”). Yo soy [por favor, indica la relación que te vincula a ti, como firmante de esta declaración, con el Reclamante]. 
+
+Declaro que la reclamación y los hechos aquí expuestos son ciertos, y entiendo y acepto que esta notificación podrá ser utilizada en un procedimiento judicial en relación con esta reclamación por difamación. 
+
+Firmado: 
+
+
+
+Fecha: 
+
+Términos y condiciones de precios
+
+TRIPORG, S.L. no es un agente de viajes ni un tour operador y no cobra a sus usuarios por los servicios que presta en su Sitio Web. No obstante, debes tener en cuenta que los agentes, socios y proveedores de servicios que ofrecen sus servicios y productos en el Sitio Web de TRIPORG puede que no hayan incluido todos los costes, impuestos y recargos en los precios expuestos. Las tarifas aéreas, en particular, están sujetas frecuentemente a costes adicionales tales como tasas por llegadas y salidas, tasas internacionales, gastos de tramitación y otros recargos (muchos de los cuales son establecidos legalmente). Cuando reserves con uno de nuestros socios, por favor, asegúrate de examinar su sitio web para obtener información de todos los honorarios y costes aplicables. 
+
+Para tu interés, TRIPORG, S.L. calcula el precio medio de cada hotel basándose en las tarifas de habitaciones disponibles obtenidas por nuestros socios agentes de viaje. 
+
+TRIPORG no garantiza ninguna de las tarifas específicamente propuestas en los precios u ofertas anunciados. Además, los precios medios de hoteles son mostrados en la divisa de tu preferencia utilizando los tipos de conversión de moneda vigentes. Dado que estos precios son estimatorios, por favor, comprueba con el sitio web de reservas el importe exacto y su divisa. 
+
+TRIPORG, S.L. no garantiza la efectiva disponibilidad de los precios publicitados en nuestro Sitio Web. Los precios mostrados pueden estar sujetos a una duración específica o estar acompañados de restricciones en las fechas, requisitos específicos u otras restricciones. 
+
+Otros asuntos legales
+
+Para los viajeros...
+
+Recuerda: Triporg no es una agencia de viajes. 
+Aunque intentamos ofrecerte información útil para planificar el viaje, no representamos a los hoteles y atracciones que figuran en nuestras listas. Por tanto: 
+o No podemos aceptar reservas en ellos en tu nombre. 
+o No ofrecemos información sobre cómo llegar hasta ellos ni más datos que los que figuran en el sitio Web. 
+
+Si tienes alguna pregunta sobre tus reservas, ponte en contacto con tu agencia de reservas. 
+
+Para saber cómo llegar u obtener más información, ponte en contacto directamente con los hoteles y atracciones. 
+
+Ayuda del sitio: Para plantear una pregunta o comunicar un problema sobre las características y funciones del sitio, envía un mail a triporg@triporg.org 
+
+Para profesionales del sector turístico...
+
+Ventas: Para ventas de publicidad y preguntas sobre el programa de comercio contextual, envíe un mensaje a info@triporg.org con el asunto “MARKETING”. 
+
+Ofertas laborales: 
+· Si desea desarrollar su carrera profesional en Triporg combinando lo mejor de los viajes y las tecnologías, envíe un mail con sus datos y CV a info@triporg.org con el asunto “EMPLEO”. 
+· Recuerde: si desea trabajar en un hotel o atracción, debe ponerse en contacto directamente con la empresa que corresponda. Triporg no puede reenviar su currículum. 
+
+Para otros integrantes...
+
+Socios: Para obtener información sobre cómo contratar nuestra tecnología, póngase en contacto con desarrollo comercial enviando un mensaje a info@triporg.org con el asunto “PARTNERS”. 
+
+Para los visitantes de Triporg...
+
+La sede central de Triporg se encuentra en Colón de Larreategui, 18 – 2º Izq-Dch. 48.001 Bilbao – Bizkaia (España) 
+
+Licencias software de terceros
+
+Symfony License: 
+Copyright (c) 2004-2011 Fabien Potencier 
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: 
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. 
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
+
+PHP License: 
+This product includes PHP software, freely available from http://www.php.net/software 
+
+-------------------------------------------------------------------- 
+        The PHP License, version 3.01 
+Copyright (c) 1999 - 2010 The PHP Group. All rights reserved. 
+-------------------------------------------------------------------- 
+
+Redistribution and use in source and binary forms, with or without modification, is permitted provided that the following conditions are met: 
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. 
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. 
+
+3. The name "PHP" must not be used to endorse or promote products derived from this software without prior written permission. For written permission, please contact group@php.net. 
+
+4. Products derived from this software may not be called "PHP", nor may "PHP" appear in their name, without prior written permission from group@php.net. You may indicate that your software works in conjunction with PHP by saying "Foo for PHP" instead of calling it "PHP Foo" or "phpfoo" 
+
+5. The PHP Group may publish revised and/or new versions of the license from time to time. Each version will be given a distinguishing version number. Once covered code has been published under a particular version of the license, you may always continue to use it under the terms of that version. You may also choose to use such covered code under the terms of any subsequent version of the license published by the PHP Group. No one other than the PHP Group has the right to modify the terms applicable to covered code created under this License. 
+
+6. Redistributions of any form whatsoever must retain the following acknowledgment: "This product includes PHP software, freely available from http://www.php.net/software". 
+
+THIS SOFTWARE IS PROVIDED BY THE PHP DEVELOPMENT TEAM "AS IS" AND ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE PHP DEVELOPMENT TEAM OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
+-------------------------------------------------------------------- 
+This software consists of voluntary contributions made by many individuals on behalf of the PHP Group. 
+
+The PHP Group can be contacted via Email at group@php.net. 
+
+For more information on the PHP Group and the PHP project, please see http://www.php.net. 
+
+PHP includes the Zend Engine, freely available at http://www.zend.com. 
+
+JQuery License: 
+Copyright (c) 2011 John Resig, http://jquery.com/ 
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: 
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. 
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Nota final
+
+The recommendation algorithm has been developed in collaboration with Carlos Gorria Corres. Doctor in Mathematics and a professor in the Department of Applied Mathematics, Statistics and Operations Research, Faculty of Science and Technology (UPV / EHU) 
+Social Network Icon Pack by Komodo Media, Rogie King is licensed under a Creative Commons Attribution-Share Alike 3.0 Unported License. Based on a work at www.komodomedia.com. 
+© 2014 TRIPORG, S.L. Reservados todos los derechos. Condiciones de uso y política de privacidad de TRIPORG. 
+* TRIPORG, S.L. no es una agencia de reservas y no cobra honorarios por sus servicios a los usuarios del sitio... 
+TRIPORG, S.L. no se responsabiliza del contenido de otros sitios Web. Los impuestos y tarifas no aparecen incluidos en las ofertas.</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xh5-bR-ICb" firstAttribute="bottom" secondItem="T7m-rI-KfF" secondAttribute="bottom" id="JsV-fl-zXC"/>
+                            <constraint firstItem="Xh5-bR-ICb" firstAttribute="top" secondItem="T7m-rI-KfF" secondAttribute="top" id="cRO-5J-QOR"/>
+                            <constraint firstItem="Xh5-bR-ICb" firstAttribute="centerX" secondItem="T7m-rI-KfF" secondAttribute="centerX" id="mIl-Lf-mI7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mhy-7H-yYS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1575" y="885"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="KFf-Kf-FvM">
+            <objects>
+                <viewController storyboardIdentifier="Login" id="Khn-Qm-XE0" customClass="TZLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pRK-Yg-RfX"/>
+                        <viewControllerLayoutGuide type="bottom" id="nHp-TU-Dod"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xi3-a7-XPA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slK-IZ-2CN">
+                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="outsideTap:" destination="Khn-Qm-XE0" eventType="touchDown" id="rQj-x6-4aM"/>
+                                </connections>
+                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="voo-5y-tqI">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="G17-Zs-xvc"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem id="E2B-ko-7IT">
+                                        <color key="tintColor" red="0.57647058819999997" green="0.82745098039999998" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="backToNormal:" destination="Khn-Qm-XE0" id="twb-R7-xvj"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="23b-Jp-Q8L"/>
+                                    <barButtonItem enabled="NO" title="copyright" id="eQo-5x-W87"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="s6O-qh-SSD"/>
+                                    <barButtonItem title="Legal" id="LyN-Zt-8LP">
+                                        <color key="tintColor" red="0.57647058819999997" green="0.82745098039999998" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="legal:" destination="Khn-Qm-XE0" id="FNl-fd-gGn"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.57647058819999997" green="0.82745098039999998" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="slK-IZ-2CN" firstAttribute="trailing" secondItem="voo-5y-tqI" secondAttribute="trailing" id="0WU-EG-9Vo"/>
+                            <constraint firstItem="voo-5y-tqI" firstAttribute="leading" secondItem="Xi3-a7-XPA" secondAttribute="leading" id="23X-OW-Yww"/>
+                            <constraint firstItem="voo-5y-tqI" firstAttribute="top" secondItem="slK-IZ-2CN" secondAttribute="bottom" id="9CF-4U-A1k"/>
+                            <constraint firstItem="voo-5y-tqI" firstAttribute="leading" secondItem="slK-IZ-2CN" secondAttribute="leading" id="JcI-GE-hww"/>
+                            <constraint firstAttribute="bottom" secondItem="voo-5y-tqI" secondAttribute="bottom" id="Z0y-y6-SLF"/>
+                            <constraint firstAttribute="trailing" secondItem="slK-IZ-2CN" secondAttribute="trailing" id="mmJ-cd-U2A"/>
+                            <constraint firstItem="slK-IZ-2CN" firstAttribute="top" secondItem="Xi3-a7-XPA" secondAttribute="top" constant="20" symbolic="YES" id="u1u-BM-Wpr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="copyrightTriporg" destination="eQo-5x-W87" id="Fb3-i3-JhT"/>
+                        <outlet property="legalButton" destination="LyN-Zt-8LP" id="tR3-GV-8v5"/>
+                        <outlet property="returnButton" destination="E2B-ko-7IT" id="W0d-Dd-JnR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5p1-Co-srK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1575" y="237"/>
+        </scene>
+        <!--Restriction List Controller-->
+        <scene sceneID="rzg-As-1H0">
+            <objects>
+                <viewController storyboardIdentifier="CitasList" id="Ona-VY-dvA" customClass="TZRestrictionListController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a6a-HV-aaR"/>
+                        <viewControllerLayoutGuide type="bottom" id="G0f-vX-Lfx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="spD-sY-44d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="k91-LL-USJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ona-VY-dvA" id="r3J-LP-CDC"/>
+                                    <outlet property="delegate" destination="Ona-VY-dvA" id="msf-Bk-8Ak"/>
+                                </connections>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yS1-Px-W9b">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="xPQ-i2-BHZ"/>
+                                    <barButtonItem title="Terminar y Crear Viaje" style="done" id="8BV-iZ-LGi">
+                                        <color key="tintColor" red="0.57647058819999997" green="0.82745098039999998" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="finalShowdown:" destination="Ona-VY-dvA" id="uul-Cc-NT7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="550-va-PYG"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="k91-LL-USJ" firstAttribute="leading" secondItem="yS1-Px-W9b" secondAttribute="leading" id="HBV-58-Dkl"/>
+                            <constraint firstItem="k91-LL-USJ" firstAttribute="leading" secondItem="spD-sY-44d" secondAttribute="leading" id="T2y-Qk-vh4"/>
+                            <constraint firstItem="yS1-Px-W9b" firstAttribute="top" secondItem="k91-LL-USJ" secondAttribute="bottom" id="hlX-pO-QTs"/>
+                            <constraint firstAttribute="bottom" secondItem="yS1-Px-W9b" secondAttribute="bottom" id="ixH-fw-K55"/>
+                            <constraint firstItem="k91-LL-USJ" firstAttribute="trailing" secondItem="yS1-Px-W9b" secondAttribute="trailing" id="p2a-y7-f6h"/>
+                            <constraint firstItem="k91-LL-USJ" firstAttribute="top" secondItem="spD-sY-44d" secondAttribute="top" id="pbg-qA-ieU"/>
+                            <constraint firstAttribute="trailing" secondItem="k91-LL-USJ" secondAttribute="trailing" id="tTu-QC-NAw"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="createTripButton" destination="8BV-iZ-LGi" id="ano-93-3Q7"/>
+                        <outlet property="tableView" destination="k91-LL-USJ" id="i7Y-wm-yY2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VTF-t9-Ch5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-304" y="1537"/>
+        </scene>
+        <!--Trip Event Detail Controller-->
+        <scene sceneID="4mq-dz-fng">
+            <objects>
+                <viewController storyboardIdentifier="TripEventDetail" id="8Ex-Be-gaf" customClass="TZTripEventDetailController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HKK-5j-138"/>
+                        <viewControllerLayoutGuide type="bottom" id="HF2-gM-Yx7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7gE-CE-hbV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="bqu-Ui-c1o">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8Ex-Be-gaf" id="RLJ-td-uGM"/>
+                                    <outlet property="delegate" destination="8Ex-Be-gaf" id="J6F-W4-OGu"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bqu-Ui-c1o" secondAttribute="trailing" id="8uJ-QQ-KcE"/>
+                            <constraint firstItem="bqu-Ui-c1o" firstAttribute="leading" secondItem="7gE-CE-hbV" secondAttribute="leading" id="ADb-Lv-7Nd"/>
+                            <constraint firstAttribute="bottom" secondItem="bqu-Ui-c1o" secondAttribute="bottom" id="JQE-fG-sFP"/>
+                            <constraint firstItem="bqu-Ui-c1o" firstAttribute="top" secondItem="7gE-CE-hbV" secondAttribute="top" id="ZbM-gc-BpR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="bqu-Ui-c1o" id="D5J-fg-F8t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nzf-xg-ig7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="119" y="342"/>
+        </scene>
+        <!--Hotel View Controller-->
+        <scene sceneID="lna-3r-O4O">
+            <objects>
+                <viewController storyboardIdentifier="hotel" id="Aso-et-dp8" customClass="TZHotelViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Uec-mO-RsC"/>
+                        <viewControllerLayoutGuide type="bottom" id="qMe-5C-nuq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qUo-7y-S4B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="61O-em-mTD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="523" y="237"/>
+        </scene>
+        <!--Trip Events Table Controller-->
+        <scene sceneID="Idp-vt-Cd7">
+            <objects>
+                <viewController storyboardIdentifier="TripDetail" id="xAM-pB-64v" customClass="TZTripEventsTableController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SnX-K4-xHL"/>
+                        <viewControllerLayoutGuide type="bottom" id="qqM-Bd-MQK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kMB-d5-CB7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="SEP-8Y-RPq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="xAM-pB-64v" id="anO-tM-gkf"/>
+                                    <outlet property="delegate" destination="xAM-pB-64v" id="PHC-aT-XWW"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="SEP-8Y-RPq" secondAttribute="bottom" id="0ci-my-yYo"/>
+                            <constraint firstItem="SEP-8Y-RPq" firstAttribute="leading" secondItem="kMB-d5-CB7" secondAttribute="leading" id="Aw8-1C-TDL"/>
+                            <constraint firstAttribute="trailing" secondItem="SEP-8Y-RPq" secondAttribute="trailing" id="IZc-R9-uMC"/>
+                            <constraint firstItem="SEP-8Y-RPq" firstAttribute="top" secondItem="kMB-d5-CB7" secondAttribute="top" id="Zxe-aY-Ihb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="SEP-8Y-RPq" id="IoY-xO-xEs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oyy-8w-ZPR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-304" y="237"/>
+        </scene>
+        <!--Destination View Controller-->
+        <scene sceneID="XCY-4t-xaj">
+            <objects>
+                <viewController storyboardIdentifier="citySelector" id="cUm-TR-AvE" customClass="TZDestinationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5aP-G9-r1V"/>
+                        <viewControllerLayoutGuide type="bottom" id="fEV-b5-2Aq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fnO-eH-bPc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Xak-st-eXC">
+                                <rect key="frame" x="0.0" y="65" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="cUm-TR-AvE" id="Fnt-av-wPF"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Fbb-1u-Lux">
+                                <rect key="frame" x="0.0" y="121" width="375" height="546"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="cUm-TR-AvE" id="hwf-Q2-kJc"/>
+                                    <outlet property="delegate" destination="cUm-TR-AvE" id="qxp-6M-DhA"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xak-st-eXC" firstAttribute="top" secondItem="5aP-G9-r1V" secondAttribute="bottom" constant="1" id="1zx-2E-pRd"/>
+                            <constraint firstItem="Xak-st-eXC" firstAttribute="trailing" secondItem="Fbb-1u-Lux" secondAttribute="trailing" id="5cY-MU-6Pc"/>
+                            <constraint firstItem="Xak-st-eXC" firstAttribute="leading" secondItem="fnO-eH-bPc" secondAttribute="leading" id="GwD-La-46r"/>
+                            <constraint firstAttribute="trailing" secondItem="Fbb-1u-Lux" secondAttribute="trailing" id="NpT-2g-ayh"/>
+                            <constraint firstAttribute="bottom" secondItem="Fbb-1u-Lux" secondAttribute="bottom" id="YyH-zG-xLp"/>
+                            <constraint firstItem="Xak-st-eXC" firstAttribute="leading" secondItem="Fbb-1u-Lux" secondAttribute="leading" id="kDc-nm-5rf"/>
+                            <constraint firstItem="Fbb-1u-Lux" firstAttribute="top" secondItem="Xak-st-eXC" secondAttribute="bottom" id="lcb-9S-9qr"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="searchMyCity" destination="Xak-st-eXC" id="Brg-VN-3ie"/>
+                        <outlet property="tableView" destination="Fbb-1u-Lux" id="IEh-uZ-ThF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mxe-wa-a1n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1151" y="885"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="Hmp-Ho-6yk">
+            <objects>
+                <tableViewController storyboardIdentifier="MenuShow" id="Xr5-fd-xmb" customClass="TZMenuViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="puA-mT-Oto">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="Eu5-p5-HAm" customClass="TZMenuTableViewCell">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eu5-p5-HAm" id="CWm-oU-DAY">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Xr5-fd-xmb" id="V1I-IZ-Jhn"/>
+                            <outlet property="delegate" destination="Xr5-fd-xmb" id="274-fp-uho"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zko-lm-3zf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-722" y="-409"/>
+        </scene>
+        <!--Lenguage View Controller-->
+        <scene sceneID="897-cF-2zF">
+            <objects>
+                <tableViewController storyboardIdentifier="LenguageShow" id="kch-Bw-ljf" customClass="TZLenguageViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="y5j-MN-blL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="9EW-8N-SwM">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9EW-8N-SwM" id="E4J-hJ-Cqg">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kch-Bw-ljf" id="BQJ-hS-o4c"/>
+                            <outlet property="delegate" destination="kch-Bw-ljf" id="dyr-rz-TMo"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xEx-Us-eMl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="119" y="-409"/>
+        </scene>
+        <!--Comment View Controller-->
+        <scene sceneID="ptS-iq-PLb">
+            <objects>
+                <viewController storyboardIdentifier="commentShow" id="uf9-za-Emu" customClass="TZCommentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oTT-DE-YpS"/>
+                        <viewControllerLayoutGuide type="bottom" id="rDa-aL-dWV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sd5-H9-qca">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Fb1-La-Yse">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="uf9-za-Emu" id="DUG-KU-cmp"/>
+                                    <outlet property="delegate" destination="uf9-za-Emu" id="NVC-hp-QG3"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rDa-aL-dWV" firstAttribute="top" secondItem="Fb1-La-Yse" secondAttribute="bottom" constant="100" id="0bc-J6-2d1"/>
+                            <constraint firstAttribute="trailing" secondItem="Fb1-La-Yse" secondAttribute="trailing" id="Gb2-aV-5xg"/>
+                            <constraint firstItem="Fb1-La-Yse" firstAttribute="leading" secondItem="Sd5-H9-qca" secondAttribute="leading" id="YJW-4k-6qr"/>
+                            <constraint firstItem="Fb1-La-Yse" firstAttribute="top" secondItem="Sd5-H9-qca" secondAttribute="top" id="goC-1o-0sq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Fb1-La-Yse" id="FKw-X1-4lI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="er1-Z1-jbb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="119" y="885"/>
+        </scene>
+        <!--Suggestion View Controller-->
+        <scene sceneID="HUQ-Fg-Jcf">
+            <objects>
+                <viewController storyboardIdentifier="Suggestion" id="z0a-Q3-cj4" customClass="TZSuggestionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e9C-gn-nIj"/>
+                        <viewControllerLayoutGuide type="bottom" id="wFQ-m3-5kY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rHW-yz-l07">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cGJ-Fe-fNk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="523" y="885"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="waf-LB-Bp9">
+            <objects>
+                <viewController storyboardIdentifier="aboutTriporg" id="Ad6-nb-erP" customClass="TZAboutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bbg-cN-asv"/>
+                        <viewControllerLayoutGuide type="bottom" id="CD3-Zh-YfT"/>
+                    </layoutGuides>
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="ULt-Qf-ir1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qrH-UM-pP5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TriporgTitle" translatesAutoresizingMaskIntoConstraints="NO" id="2e6-Dm-7H3">
+                                        <rect key="frame" x="0.0" y="20" width="375" height="140"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="9ZW-vF-U9O"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Version" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zea-cW-60G">
+                                        <rect key="frame" x="20" y="168" width="280" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FfZ-yT-zt9">
+                                        <rect key="frame" x="20" y="197" width="280" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Copyright" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54v-2I-Xgh">
+                                        <rect key="frame" x="20" y="285" width="280" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guH-1f-DpE">
+                                        <rect key="frame" x="20" y="314" width="280" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.49019607840000001" green="0.72941176470000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="www.triporg.org">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="webIr:" destination="Ad6-nb-erP" eventType="touchUpInside" id="XVx-GB-K5V"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.89999997615814209" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fU1-tB-ciz">
+                                        <rect key="frame" x="20" y="420" width="280" height="148"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Pencil designed by Chris Lee from The Noun Project, Map designed by Atelier Iceberg from The Noun Project, Map Marker designed by Dennis Gramms from The Noun Project,Trash Can designed by Björn Wisnewski from The Noun Project, Magnifying Glass designed by John Caserta from The Noun Project, Star designed by Renee Ramsey-Passmore from The Noun Project, Circle designed by Luboš Volkov from The Noun Project, Graph designed by Erin Standley from The Noun Project, Electronic Payment designed by Lance Weisser from The Noun Project, Money designed by Sergey Shmidt from The Noun Project, Delete &amp; Check Mark &amp; Cloud Download designed by P.J. Onori from The Noun Project, Save designed by Alex Dee from The Noun Project, City designed by Thibault Geffroy from The Noun Project, Loading designed by Mateo Zlatar from The Noun Project.</string>
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <font key="NSFont" size="8" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="2e6-Dm-7H3" secondAttribute="bottom" constant="408" id="TKL-Gu-qUz"/>
+                                    <constraint firstItem="2e6-Dm-7H3" firstAttribute="top" secondItem="qrH-UM-pP5" secondAttribute="top" constant="20" symbolic="YES" id="Xnn-UE-vkF"/>
+                                    <constraint firstItem="2e6-Dm-7H3" firstAttribute="centerX" secondItem="qrH-UM-pP5" secondAttribute="centerX" id="bp8-fp-p5I"/>
+                                    <constraint firstAttribute="trailing" secondItem="2e6-Dm-7H3" secondAttribute="trailing" id="ip8-eo-FJC"/>
+                                    <constraint firstItem="2e6-Dm-7H3" firstAttribute="leading" secondItem="qrH-UM-pP5" secondAttribute="leading" id="zzf-Fh-HRO"/>
+                                </constraints>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="640"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.57647058819999997" green="0.82745098039999998" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qrH-UM-pP5" firstAttribute="leading" secondItem="ULt-Qf-ir1" secondAttribute="leading" id="39M-wS-KB1"/>
+                            <constraint firstItem="qrH-UM-pP5" firstAttribute="top" secondItem="ULt-Qf-ir1" secondAttribute="top" id="Gm1-xp-Rpc"/>
+                            <constraint firstAttribute="bottom" secondItem="qrH-UM-pP5" secondAttribute="bottom" id="Qxz-ik-P8b"/>
+                            <constraint firstItem="qrH-UM-pP5" firstAttribute="trailing" secondItem="ULt-Qf-ir1" secondAttribute="trailing" id="nm2-2b-W59"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="copyrightT" destination="54v-2I-Xgh" id="ZV2-ME-5hd"/>
+                        <outlet property="logoAbout" destination="2e6-Dm-7H3" id="sW1-4k-0Mr"/>
+                        <outlet property="textoAtribuciones" destination="fU1-tB-ciz" id="c4s-1e-gNm"/>
+                        <outlet property="versionApp" destination="Zea-cW-60G" id="xG6-uD-bPL"/>
+                        <outlet property="webButton" destination="guH-1f-DpE" id="FzL-v5-Xsw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AbV-GX-vJO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1575" y="-409"/>
+        </scene>
+        <!--Ubication Controller-->
+        <scene sceneID="xwX-YU-dPh">
+            <objects>
+                <viewController storyboardIdentifier="InvestigateList" id="eye-zm-JTj" customClass="TZUbicationController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="O7y-ag-ji4"/>
+                        <viewControllerLayoutGuide type="bottom" id="dng-ha-ruh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="y4m-8b-nIp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ht6-2E-Wdz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="eye-zm-JTj" id="gyo-QT-qIt"/>
+                                    <outlet property="delegate" destination="eye-zm-JTj" id="H9j-5o-h2V"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Ht6-2E-Wdz" secondAttribute="bottom" id="IgT-Tx-HfI"/>
+                            <constraint firstItem="Ht6-2E-Wdz" firstAttribute="leading" secondItem="y4m-8b-nIp" secondAttribute="leading" id="h4V-gK-VAu"/>
+                            <constraint firstItem="Ht6-2E-Wdz" firstAttribute="top" secondItem="y4m-8b-nIp" secondAttribute="top" id="pBs-tD-xWj"/>
+                            <constraint firstAttribute="trailing" secondItem="Ht6-2E-Wdz" secondAttribute="trailing" id="zz1-kL-YTD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BqE-eQ-e0W"/>
+                    <connections>
+                        <outlet property="tableView" destination="Ht6-2E-Wdz" id="Z5K-iM-H1W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="517-uz-KY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1151" y="1537"/>
+        </scene>
+        <!--Near Places View Controller-->
+        <scene sceneID="Kp0-Vr-fv5">
+            <objects>
+                <viewController storyboardIdentifier="nearPlaces" id="4cy-WA-CmU" customClass="TZNearPlacesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ULo-Zs-tfy"/>
+                        <viewControllerLayoutGuide type="bottom" id="nS6-Vu-kGU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="afX-uL-Gif">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bTQ-Hx-h1B">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <connections>
+                                    <outlet property="delegate" destination="4cy-WA-CmU" id="uPQ-lH-a5b"/>
+                                </connections>
+                            </mapView>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="YK2-53-dJ4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="4cy-WA-CmU" id="QLv-Rr-WBI"/>
+                                    <outlet property="delegate" destination="4cy-WA-CmU" id="efv-dR-Nyl"/>
+                                </connections>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1fb-nl-Ica">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="bookmarks" id="aoo-8r-JCB">
+                                        <connections>
+                                            <action selector="showPoisList:" destination="4cy-WA-CmU" id="4mq-O3-vXv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="dhS-pd-PQ9"/>
+                                    <barButtonItem style="plain" id="jYd-eG-TDs">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="sSr-1F-RtO">
+                                            <rect key="frame" x="276" y="7.5" width="83" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="St"/>
+                                                <segment title="H"/>
+                                                <segment title="S"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="MapTypeChange:" destination="4cy-WA-CmU" eventType="valueChanged" id="wqq-7H-GPk"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1fb-nl-Ica" firstAttribute="top" secondItem="bTQ-Hx-h1B" secondAttribute="bottom" id="6jd-Md-vjp"/>
+                            <constraint firstItem="YK2-53-dJ4" firstAttribute="trailing" secondItem="bTQ-Hx-h1B" secondAttribute="trailing" id="AwO-h3-vMQ"/>
+                            <constraint firstAttribute="trailing" secondItem="YK2-53-dJ4" secondAttribute="trailing" id="GZP-Fh-5Nh"/>
+                            <constraint firstItem="YK2-53-dJ4" firstAttribute="leading" secondItem="afX-uL-Gif" secondAttribute="leading" id="IB7-WG-PuS"/>
+                            <constraint firstItem="YK2-53-dJ4" firstAttribute="trailing" secondItem="1fb-nl-Ica" secondAttribute="trailing" id="K00-1Q-TCE"/>
+                            <constraint firstItem="1fb-nl-Ica" firstAttribute="top" secondItem="YK2-53-dJ4" secondAttribute="bottom" id="Ys9-Xf-Om9"/>
+                            <constraint firstItem="YK2-53-dJ4" firstAttribute="top" secondItem="afX-uL-Gif" secondAttribute="top" id="esf-j4-Zkg"/>
+                            <constraint firstAttribute="bottom" secondItem="1fb-nl-Ica" secondAttribute="bottom" id="gkh-MK-MHU"/>
+                            <constraint firstItem="bTQ-Hx-h1B" firstAttribute="leading" secondItem="YK2-53-dJ4" secondAttribute="leading" id="qGg-Gz-qjR"/>
+                            <constraint firstItem="YK2-53-dJ4" firstAttribute="leading" secondItem="1fb-nl-Ica" secondAttribute="leading" id="uh9-Iy-XP7"/>
+                            <constraint firstItem="YK2-53-dJ4" firstAttribute="top" secondItem="bTQ-Hx-h1B" secondAttribute="top" id="uy6-HD-MaD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapControl" destination="sSr-1F-RtO" id="Bz7-vt-oB3"/>
+                        <outlet property="mapView" destination="bTQ-Hx-h1B" id="maP-RN-WK6"/>
+                        <outlet property="showListButton" destination="aoo-8r-JCB" id="NiU-rj-sVp"/>
+                        <outlet property="tableView" destination="YK2-53-dJ4" id="tGm-Ul-cvC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qeB-2j-MFX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1575" y="2189"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="knk-xd-c0L">
+            <objects>
+                <viewController storyboardIdentifier="collectCitiesFix" id="HWE-O9-CSQ" customClass="TZCollectionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5DT-9g-0F7"/>
+                        <viewControllerLayoutGuide type="bottom" id="gS2-5k-wvp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cCL-Bq-Kim">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IkU-Eu-Asy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6QO-J6-6a0">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="40" height="22"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="uvr-tD-r4r" customClass="TZCollectionViewCell">
+                                        <rect key="frame" x="0.0" y="22" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Wg-Sc-4yy">
+                                                    <rect key="frame" x="5" y="5" width="90" height="75"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="P3P-Cc-Ikz"/>
+                                                        <constraint firstAttribute="height" constant="75" id="gMH-jv-g6r"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Barcelona" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nb3-gQ-kJf">
+                                                    <rect key="frame" x="5" y="79" width="90" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="nb3-gQ-kJf" firstAttribute="leading" secondItem="4Wg-Sc-4yy" secondAttribute="leading" id="Ck5-pD-lcd"/>
+                                            <constraint firstAttribute="bottom" secondItem="4Wg-Sc-4yy" secondAttribute="bottom" constant="20" id="P9v-0O-bmh"/>
+                                            <constraint firstItem="nb3-gQ-kJf" firstAttribute="top" secondItem="uvr-tD-r4r" secondAttribute="top" constant="79" id="duo-ox-y4p"/>
+                                            <constraint firstItem="4Wg-Sc-4yy" firstAttribute="centerX" secondItem="uvr-tD-r4r" secondAttribute="centerX" id="jvo-Jc-OBG"/>
+                                            <constraint firstItem="nb3-gQ-kJf" firstAttribute="trailing" secondItem="4Wg-Sc-4yy" secondAttribute="trailing" id="q9B-Zt-HAp"/>
+                                            <constraint firstAttribute="bottom" secondItem="nb3-gQ-kJf" secondAttribute="bottom" id="sYq-wn-pW1"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="recipeImageView" destination="4Wg-Sc-4yy" id="0J5-zz-dea"/>
+                                            <outlet property="recipeLabel" destination="nb3-gQ-kJf" id="xZS-hS-xOJ"/>
+                                            <segue destination="eye-zm-JTj" kind="push" identifier="showRecipePhoto" id="QGg-QL-dVI"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderView" id="upE-kG-ziL" customClass="TZCollectionHeaderView">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="22"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="city" translatesAutoresizingMaskIntoConstraints="NO" id="feb-1R-qpX">
+                                            <rect key="frame" x="10" y="1" width="30" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="jUQ-f8-2Kr"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="United States Of America" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klq-tz-eaI">
+                                            <rect key="frame" x="20" y="0.0" width="335" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="feb-1R-qpX" secondAttribute="bottom" constant="1" id="07L-YQ-2JC"/>
+                                        <constraint firstAttribute="bottom" secondItem="klq-tz-eaI" secondAttribute="bottom" constant="2" id="Gk5-tN-yIZ"/>
+                                        <constraint firstItem="feb-1R-qpX" firstAttribute="top" secondItem="klq-tz-eaI" secondAttribute="top" constant="1" id="NuM-7H-NO6"/>
+                                        <constraint firstItem="klq-tz-eaI" firstAttribute="leading" secondItem="upE-kG-ziL" secondAttribute="leading" constant="20" symbolic="YES" id="O6M-ch-E1q"/>
+                                        <constraint firstItem="feb-1R-qpX" firstAttribute="top" secondItem="upE-kG-ziL" secondAttribute="top" constant="1" id="Y6r-3T-OwY"/>
+                                        <constraint firstItem="feb-1R-qpX" firstAttribute="leading" secondItem="upE-kG-ziL" secondAttribute="leading" constant="10" id="ZBg-89-iij"/>
+                                        <constraint firstAttribute="trailing" secondItem="klq-tz-eaI" secondAttribute="trailing" constant="20" symbolic="YES" id="ue0-NH-NKv"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="countryLabel" destination="klq-tz-eaI" id="nDv-ac-jut"/>
+                                        <outlet property="imageCountry" destination="feb-1R-qpX" id="Nd6-rR-QMs"/>
+                                    </connections>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="HWE-O9-CSQ" id="JDn-aC-OQW"/>
+                                    <outlet property="delegate" destination="HWE-O9-CSQ" id="40H-NG-Lic"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="IkU-Eu-Asy" secondAttribute="bottom" id="2QX-fb-4rA"/>
+                            <constraint firstAttribute="trailing" secondItem="IkU-Eu-Asy" secondAttribute="trailing" id="Ds7-e5-cAk"/>
+                            <constraint firstItem="IkU-Eu-Asy" firstAttribute="top" secondItem="cCL-Bq-Kim" secondAttribute="top" id="KMB-ec-XJJ"/>
+                            <constraint firstItem="IkU-Eu-Asy" firstAttribute="leading" secondItem="cCL-Bq-Kim" secondAttribute="leading" id="jxg-Hh-N8x"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lwQ-Zi-VP6"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="collectionView" destination="IkU-Eu-Asy" id="RML-yh-6tg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uAS-Qh-zkR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1575" y="1537"/>
+        </scene>
+        <!--City Info Controller-->
+        <scene sceneID="bVQ-eZ-2e2">
+            <objects>
+                <viewController storyboardIdentifier="cityInfo" id="6Ym-j0-7AQ" customClass="TZCityInfoController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pyf-MU-mhM"/>
+                        <viewControllerLayoutGuide type="bottom" id="vbM-3o-dCq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VJh-yi-zH4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="6p1-wx-be0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="6Ym-j0-7AQ" id="6j5-UH-jir"/>
+                                    <outlet property="delegate" destination="6Ym-j0-7AQ" id="hfc-6x-Ncx"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="6p1-wx-be0" secondAttribute="bottom" id="1Eu-33-udy"/>
+                            <constraint firstItem="6p1-wx-be0" firstAttribute="top" secondItem="VJh-yi-zH4" secondAttribute="top" id="5yi-Ou-EGA"/>
+                            <constraint firstAttribute="trailing" secondItem="6p1-wx-be0" secondAttribute="trailing" id="MgC-tX-e37"/>
+                            <constraint firstItem="6p1-wx-be0" firstAttribute="leading" secondItem="VJh-yi-zH4" secondAttribute="leading" id="oe4-a6-nbc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="6p1-wx-be0" id="fqd-ik-IxN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tjo-LK-cUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="523" y="-409"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TriporgTitle" width="1024" height="437"/>
+        <image name="city" width="48" height="48"/>
+    </resources>
+</document>
